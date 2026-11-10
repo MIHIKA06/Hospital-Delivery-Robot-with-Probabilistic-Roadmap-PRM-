@@ -31,6 +31,14 @@ python3 -m client                                        # CoppeliaSim running w
 python3 -m client --dry-run --batch examples_orders.txt  # scripted orders (for experiments)
 ```
 
+### Testing with CoppeliaSim (tested with CoppeliaSim Edu 4.10, macOS arm64)
+
+1. Start CoppeliaSim. The ZeroMQ remote API server starts automatically on port 23000.
+2. Open `scene/client_test.ttt`, or build it with `python3 tools/build_test_scene.py`. It contains a Pioneer P3-DX with its demo script removed and one `/loc_<name>` dummy per location.
+3. Run `python3 -m client`. Orders now move the robot in the simulator.
+
+`scene/client_test.ttt` is only for testing the client. The real hospital scene with walls and rooms will be `scene/hospital.ttt`.
+
 Shell commands: `deliver <pickup> <dropoff> [--urgent] [--item NAME]`, `status`, `queue`,
 `history`, `cancel <id>`, `stop` (emergency stop), `resume`, `locations`, `wait`, `quit`.
 
