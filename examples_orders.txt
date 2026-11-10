@@ -1,0 +1,10 @@
+# Example batch: mixed normal and urgent orders
+deliver pharmacy ward1 --item antibiotics
+deliver lab ward3 --item blood_sample
+deliver pharmacy icu --urgent --item insulin
+deliver reception ward2 --item files
+deliver pharmacy emergency --urgent --item adrenaline
+queue
+wait
+history
+quit
