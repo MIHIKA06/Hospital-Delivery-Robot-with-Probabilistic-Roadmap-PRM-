@@ -39,10 +39,14 @@ class Dispatcher(threading.Thread):
         self.ready = threading.Event()        # set once connected
         self.error: Optional[str] = None
         self._estop = threading.Event()       # emergency stop / pause
+        self._estop_at = 0.0
         self._quit = threading.Event()
+        self._last_pose_update = 0.0
 
     # ---- commands from the shell (thread-safe) ----
     def emergency_stop(self) -> None:
+        if not self._estop.is_set():
+            self._estop_at = time.perf_counter()
         self._estop.set()
 
     def resume(self) -> None:
@@ -79,6 +83,15 @@ class Dispatcher(threading.Thread):
         self.bridge.close()
 
     def _should_stop(self) -> bool:
+        # Called by the follower every control step (in this thread), so it is
+        # also a safe place to refresh the pose shown by `status`.
+        now = time.perf_counter()
+        if now - self._last_pose_update > 0.3:
+            self._last_pose_update = now
+            try:
+                self.last_pose = self.bridge.pose()
+            except Exception:
+                pass
         return self._estop.is_set() or self._quit.is_set()
 
     def _leg(self, order: Order, goal_name: str) -> bool:
@@ -95,7 +108,8 @@ class Dispatcher(threading.Thread):
         self.last_pose = self.bridge.pose()
         if not ok:
             if self._estop.is_set():
-                order.note = "emergency stop"
+                latency = time.perf_counter() - self._estop_at
+                order.note = f"emergency stop, halted in {latency:.2f} s"
             elif self._quit.is_set():
                 order.note = "client quit"
             else:
