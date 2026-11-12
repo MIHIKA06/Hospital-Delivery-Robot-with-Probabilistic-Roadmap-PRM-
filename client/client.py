@@ -125,6 +125,24 @@ class HospitalShell(cmd.Cmd):
         self.dispatcher.resume()
         print("Resumed.")
 
+    def do_block(self, arg):
+        """block <x0> <y0> <x1> <y1> - mark a rectangle as blocked (e.g. a bed in the
+        corridor); the PRM drops the affected nodes/edges and later routes avoid it"""
+        try:
+            x0, y0, x1, y1 = map(float, arg.split())
+        except ValueError:
+            print("usage: block <x0> <y0> <x1> <y1>   (metres, world frame)")
+            return
+        try:
+            from planner.prm import block
+        except ImportError:
+            print("Blocking needs the PRM planner (planner/prm.py).")
+            return
+        rect = (min(x0, x1), min(y0, y1), max(x0, x1), max(y0, y1))
+        nodes, edges = block(rect)
+        print(f"Blocked {rect}: removed {nodes} roadmap nodes and {edges} edges. "
+              "Next routes will avoid it.")
+
     def do_locations(self, arg):
         """locations - list named places and their coordinates"""
         for name, (x, y) in sorted(self.dispatcher.locations.items()):
