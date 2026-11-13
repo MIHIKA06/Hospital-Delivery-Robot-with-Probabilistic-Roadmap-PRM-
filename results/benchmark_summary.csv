@@ -1,0 +1,7 @@
+planner,type,success_rate_pct,successful_queries,build_time_ms,mean_query_time_ms,median_query_time_ms,max_query_time_ms,mean_path_length_m,mean_waypoints
+"PRM (Door-seeded, N=300)",multi-query,100.0,72/72,41.42,0.535,0.54,1.058,8.218,3.9
+"PRM (Bridge, N=300)",multi-query,58.3,42/72,66.22,0.435,0.5,0.673,7.467,3.6
+"PRM (Uniform, N=300)",multi-query,61.1,44/72,40.48,0.496,0.526,1.038,7.683,4.0
+"PRM (Door-seeded, N=100)",multi-query,100.0,72/72,9.29,0.335,0.353,0.513,8.765,3.7
+RRT Baseline (Single-Query),single-query,91.7,66/72,0.0,18.789,2.578,194.095,8.514,3.5
+Grid A* Baseline (res=0.20m),discrete-grid,100.0,72/72,0.01,8.044,6.366,24.077,7.965,3.8
