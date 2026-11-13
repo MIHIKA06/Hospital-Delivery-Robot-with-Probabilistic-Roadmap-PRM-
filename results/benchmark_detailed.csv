@@ -1,0 +1,433 @@
+planner,start,goal,success,query_time_ms,path_length_m,waypoints
+"PRM (Door-seeded, N=300)",home,pharmacy,True,0.483,5.745,3
+"PRM (Door-seeded, N=300)",home,lab,True,0.498,6.045,4
+"PRM (Door-seeded, N=300)",home,reception,True,0.017,4.0,2
+"PRM (Door-seeded, N=300)",home,ward1,True,0.619,7.004,5
+"PRM (Door-seeded, N=300)",home,ward2,True,0.44,4.514,3
+"PRM (Door-seeded, N=300)",home,ward3,True,0.446,4.652,3
+"PRM (Door-seeded, N=300)",home,icu,True,0.507,6.838,3
+"PRM (Door-seeded, N=300)",home,emergency,True,0.017,4.743,2
+"PRM (Door-seeded, N=300)",pharmacy,home,True,0.459,5.745,3
+"PRM (Door-seeded, N=300)",pharmacy,lab,True,0.74,11.794,6
+"PRM (Door-seeded, N=300)",pharmacy,reception,True,0.552,9.874,4
+"PRM (Door-seeded, N=300)",pharmacy,ward1,True,0.543,8.194,4
+"PRM (Door-seeded, N=300)",pharmacy,ward2,True,0.551,8.439,4
+"PRM (Door-seeded, N=300)",pharmacy,ward3,True,0.625,10.365,4
+"PRM (Door-seeded, N=300)",pharmacy,icu,True,0.776,12.583,5
+"PRM (Door-seeded, N=300)",pharmacy,emergency,True,0.443,4.103,3
+"PRM (Door-seeded, N=300)",lab,home,True,0.521,6.025,4
+"PRM (Door-seeded, N=300)",lab,pharmacy,True,0.772,11.794,6
+"PRM (Door-seeded, N=300)",lab,reception,True,0.46,4.233,4
+"PRM (Door-seeded, N=300)",lab,ward1,True,1.017,13.021,7
+"PRM (Door-seeded, N=300)",lab,ward2,True,0.627,10.327,4
+"PRM (Door-seeded, N=300)",lab,ward3,True,0.523,8.302,4
+"PRM (Door-seeded, N=300)",lab,icu,True,0.513,8.161,4
+"PRM (Door-seeded, N=300)",lab,emergency,True,0.685,10.893,5
+"PRM (Door-seeded, N=300)",reception,home,True,0.016,4.0,2
+"PRM (Door-seeded, N=300)",reception,pharmacy,True,0.628,9.874,4
+"PRM (Door-seeded, N=300)",reception,lab,True,0.432,4.228,4
+"PRM (Door-seeded, N=300)",reception,ward1,True,0.774,10.987,5
+"PRM (Door-seeded, N=300)",reception,ward2,True,0.548,8.065,3
+"PRM (Door-seeded, N=300)",reception,ward3,True,0.459,5.257,3
+"PRM (Door-seeded, N=300)",reception,icu,True,0.019,4.0,2
+"PRM (Door-seeded, N=300)",reception,emergency,True,0.017,8.631,2
+"PRM (Door-seeded, N=300)",ward1,home,True,0.661,7.293,5
+"PRM (Door-seeded, N=300)",ward1,pharmacy,True,0.527,8.329,4
+"PRM (Door-seeded, N=300)",ward1,lab,True,1.018,13.257,7
+"PRM (Door-seeded, N=300)",ward1,reception,True,0.804,11.289,5
+"PRM (Door-seeded, N=300)",ward1,ward2,True,0.783,9.682,6
+"PRM (Door-seeded, N=300)",ward1,ward3,True,0.887,11.677,6
+"PRM (Door-seeded, N=300)",ward1,icu,True,1.058,14.072,6
+"PRM (Door-seeded, N=300)",ward1,emergency,True,0.408,5.528,3
+"PRM (Door-seeded, N=300)",ward2,home,True,0.439,4.514,3
+"PRM (Door-seeded, N=300)",ward2,pharmacy,True,0.526,8.465,4
+"PRM (Door-seeded, N=300)",ward2,lab,True,0.625,10.327,4
+"PRM (Door-seeded, N=300)",ward2,reception,True,0.522,8.065,3
+"PRM (Door-seeded, N=300)",ward2,ward1,True,0.678,9.736,6
+"PRM (Door-seeded, N=300)",ward2,ward3,True,0.589,7.97,4
+"PRM (Door-seeded, N=300)",ward2,icu,True,0.647,10.47,4
+"PRM (Door-seeded, N=300)",ward2,emergency,True,0.466,7.282,3
+"PRM (Door-seeded, N=300)",ward3,home,True,0.449,4.652,3
+"PRM (Door-seeded, N=300)",ward3,pharmacy,True,0.602,10.365,4
+"PRM (Door-seeded, N=300)",ward3,lab,True,0.554,8.256,4
+"PRM (Door-seeded, N=300)",ward3,reception,True,0.443,5.257,3
+"PRM (Door-seeded, N=300)",ward3,ward1,True,0.804,11.677,6
+"PRM (Door-seeded, N=300)",ward3,ward2,True,0.54,7.97,4
+"PRM (Door-seeded, N=300)",ward3,icu,True,0.556,7.364,4
+"PRM (Door-seeded, N=300)",ward3,emergency,True,0.508,9.264,3
+"PRM (Door-seeded, N=300)",icu,home,True,0.478,6.838,3
+"PRM (Door-seeded, N=300)",icu,pharmacy,True,0.747,12.781,5
+"PRM (Door-seeded, N=300)",icu,lab,True,0.536,8.14,4
+"PRM (Door-seeded, N=300)",icu,reception,True,0.019,4.0,2
+"PRM (Door-seeded, N=300)",icu,ward1,True,0.918,13.64,6
+"PRM (Door-seeded, N=300)",icu,ward2,True,0.653,10.47,4
+"PRM (Door-seeded, N=300)",icu,ward3,True,0.552,7.364,4
+"PRM (Door-seeded, N=300)",icu,emergency,True,0.592,11.581,3
+"PRM (Door-seeded, N=300)",emergency,home,True,0.017,4.743,2
+"PRM (Door-seeded, N=300)",emergency,pharmacy,True,0.402,4.103,3
+"PRM (Door-seeded, N=300)",emergency,lab,True,0.674,10.543,5
+"PRM (Door-seeded, N=300)",emergency,reception,True,0.018,8.631,2
+"PRM (Door-seeded, N=300)",emergency,ward1,True,0.436,5.53,3
+"PRM (Door-seeded, N=300)",emergency,ward2,True,0.504,7.31,3
+"PRM (Door-seeded, N=300)",emergency,ward3,True,0.526,9.264,3
+"PRM (Door-seeded, N=300)",emergency,icu,True,0.616,11.581,3
+"PRM (Bridge, N=300)",home,pharmacy,True,0.452,5.998,3
+"PRM (Bridge, N=300)",home,lab,False,0.761,,
+"PRM (Bridge, N=300)",home,reception,True,0.028,4.0,2
+"PRM (Bridge, N=300)",home,ward1,False,0.793,,
+"PRM (Bridge, N=300)",home,ward2,True,0.444,4.59,3
+"PRM (Bridge, N=300)",home,ward3,True,0.467,4.603,4
+"PRM (Bridge, N=300)",home,icu,True,0.492,6.6,3
+"PRM (Bridge, N=300)",home,emergency,True,0.017,4.743,2
+"PRM (Bridge, N=300)",pharmacy,home,True,0.467,5.998,3
+"PRM (Bridge, N=300)",pharmacy,lab,False,0.745,,
+"PRM (Bridge, N=300)",pharmacy,reception,True,0.5,9.868,3
+"PRM (Bridge, N=300)",pharmacy,ward1,False,0.773,,
+"PRM (Bridge, N=300)",pharmacy,ward2,True,0.529,9.027,5
+"PRM (Bridge, N=300)",pharmacy,ward3,True,0.606,10.551,5
+"PRM (Bridge, N=300)",pharmacy,icu,True,0.642,12.598,4
+"PRM (Bridge, N=300)",pharmacy,emergency,True,0.439,4.37,3
+"PRM (Bridge, N=300)",lab,home,False,0.421,,
+"PRM (Bridge, N=300)",lab,pharmacy,False,0.403,,
+"PRM (Bridge, N=300)",lab,reception,False,0.422,,
+"PRM (Bridge, N=300)",lab,ward1,False,0.429,,
+"PRM (Bridge, N=300)",lab,ward2,False,0.427,,
+"PRM (Bridge, N=300)",lab,ward3,False,0.426,,
+"PRM (Bridge, N=300)",lab,icu,False,0.428,,
+"PRM (Bridge, N=300)",lab,emergency,False,0.416,,
+"PRM (Bridge, N=300)",reception,home,True,0.016,4.0,2
+"PRM (Bridge, N=300)",reception,pharmacy,True,0.546,9.868,3
+"PRM (Bridge, N=300)",reception,lab,False,0.746,,
+"PRM (Bridge, N=300)",reception,ward1,False,0.774,,
+"PRM (Bridge, N=300)",reception,ward2,True,0.526,8.088,3
+"PRM (Bridge, N=300)",reception,ward3,True,0.537,5.35,4
+"PRM (Bridge, N=300)",reception,icu,True,0.019,4.0,2
+"PRM (Bridge, N=300)",reception,emergency,True,0.017,8.631,2
+"PRM (Bridge, N=300)",ward1,home,False,0.433,,
+"PRM (Bridge, N=300)",ward1,pharmacy,False,0.425,,
+"PRM (Bridge, N=300)",ward1,lab,False,0.419,,
+"PRM (Bridge, N=300)",ward1,reception,False,0.433,,
+"PRM (Bridge, N=300)",ward1,ward2,False,0.437,,
+"PRM (Bridge, N=300)",ward1,ward3,False,0.451,,
+"PRM (Bridge, N=300)",ward1,icu,False,0.461,,
+"PRM (Bridge, N=300)",ward1,emergency,False,0.431,,
+"PRM (Bridge, N=300)",ward2,home,True,0.448,4.59,3
+"PRM (Bridge, N=300)",ward2,pharmacy,True,0.569,8.879,5
+"PRM (Bridge, N=300)",ward2,lab,False,0.779,,
+"PRM (Bridge, N=300)",ward2,reception,True,0.507,8.088,3
+"PRM (Bridge, N=300)",ward2,ward1,False,0.768,,
+"PRM (Bridge, N=300)",ward2,ward3,True,0.598,8.125,6
+"PRM (Bridge, N=300)",ward2,icu,True,0.673,10.359,5
+"PRM (Bridge, N=300)",ward2,emergency,True,0.497,7.467,4
+"PRM (Bridge, N=300)",ward3,home,True,0.45,4.526,4
+"PRM (Bridge, N=300)",ward3,pharmacy,True,0.632,10.437,5
+"PRM (Bridge, N=300)",ward3,lab,False,0.763,,
+"PRM (Bridge, N=300)",ward3,reception,True,0.469,5.581,4
+"PRM (Bridge, N=300)",ward3,ward1,False,0.766,,
+"PRM (Bridge, N=300)",ward3,ward2,True,0.595,7.951,6
+"PRM (Bridge, N=300)",ward3,icu,True,0.592,7.364,5
+"PRM (Bridge, N=300)",ward3,emergency,True,0.547,9.103,4
+"PRM (Bridge, N=300)",icu,home,True,0.472,6.6,3
+"PRM (Bridge, N=300)",icu,pharmacy,True,0.662,12.598,4
+"PRM (Bridge, N=300)",icu,lab,False,0.76,,
+"PRM (Bridge, N=300)",icu,reception,True,0.019,4.0,2
+"PRM (Bridge, N=300)",icu,ward1,False,0.775,,
+"PRM (Bridge, N=300)",icu,ward2,True,0.652,10.52,5
+"PRM (Bridge, N=300)",icu,ward3,True,0.566,7.364,5
+"PRM (Bridge, N=300)",icu,emergency,True,0.523,11.336,3
+"PRM (Bridge, N=300)",emergency,home,True,0.017,4.743,2
+"PRM (Bridge, N=300)",emergency,pharmacy,True,0.427,4.37,3
+"PRM (Bridge, N=300)",emergency,lab,False,0.755,,
+"PRM (Bridge, N=300)",emergency,reception,True,0.017,8.631,2
+"PRM (Bridge, N=300)",emergency,ward1,False,0.765,,
+"PRM (Bridge, N=300)",emergency,ward2,True,0.496,7.467,4
+"PRM (Bridge, N=300)",emergency,ward3,True,0.523,9.277,4
+"PRM (Bridge, N=300)",emergency,icu,True,0.557,11.336,3
+"PRM (Uniform, N=300)",home,pharmacy,True,0.504,5.745,3
+"PRM (Uniform, N=300)",home,lab,True,0.524,6.443,4
+"PRM (Uniform, N=300)",home,reception,True,0.017,4.0,2
+"PRM (Uniform, N=300)",home,ward1,True,0.626,7.004,5
+"PRM (Uniform, N=300)",home,ward2,True,0.446,4.514,3
+"PRM (Uniform, N=300)",home,ward3,False,0.857,,
+"PRM (Uniform, N=300)",home,icu,False,0.846,,
+"PRM (Uniform, N=300)",home,emergency,True,0.017,4.743,2
+"PRM (Uniform, N=300)",pharmacy,home,True,0.46,5.745,3
+"PRM (Uniform, N=300)",pharmacy,lab,True,0.761,12.24,7
+"PRM (Uniform, N=300)",pharmacy,reception,True,0.57,9.874,4
+"PRM (Uniform, N=300)",pharmacy,ward1,True,0.541,8.194,4
+"PRM (Uniform, N=300)",pharmacy,ward2,True,0.571,8.626,4
+"PRM (Uniform, N=300)",pharmacy,ward3,False,0.941,,
+"PRM (Uniform, N=300)",pharmacy,icu,False,0.924,,
+"PRM (Uniform, N=300)",pharmacy,emergency,True,0.499,4.647,3
+"PRM (Uniform, N=300)",lab,home,True,0.546,5.956,4
+"PRM (Uniform, N=300)",lab,pharmacy,True,0.893,11.759,7
+"PRM (Uniform, N=300)",lab,reception,True,0.439,4.266,4
+"PRM (Uniform, N=300)",lab,ward1,True,1.038,12.986,8
+"PRM (Uniform, N=300)",lab,ward2,True,0.691,10.35,5
+"PRM (Uniform, N=300)",lab,ward3,False,0.849,,
+"PRM (Uniform, N=300)",lab,icu,False,0.842,,
+"PRM (Uniform, N=300)",lab,emergency,True,0.72,10.858,6
+"PRM (Uniform, N=300)",reception,home,True,0.016,4.0,2
+"PRM (Uniform, N=300)",reception,pharmacy,True,0.619,9.874,4
+"PRM (Uniform, N=300)",reception,lab,True,0.424,4.228,4
+"PRM (Uniform, N=300)",reception,ward1,True,0.718,10.987,5
+"PRM (Uniform, N=300)",reception,ward2,True,0.528,8.053,3
+"PRM (Uniform, N=300)",reception,ward3,False,0.84,,
+"PRM (Uniform, N=300)",reception,icu,True,0.019,4.0,2
+"PRM (Uniform, N=300)",reception,emergency,True,0.017,8.631,2
+"PRM (Uniform, N=300)",ward1,home,True,0.632,7.293,5
+"PRM (Uniform, N=300)",ward1,pharmacy,True,0.526,8.11,4
+"PRM (Uniform, N=300)",ward1,lab,True,1.035,13.703,8
+"PRM (Uniform, N=300)",ward1,reception,True,0.78,11.289,5
+"PRM (Uniform, N=300)",ward1,ward2,True,0.808,9.682,6
+"PRM (Uniform, N=300)",ward1,ward3,False,1.103,,
+"PRM (Uniform, N=300)",ward1,icu,False,0.951,,
+"PRM (Uniform, N=300)",ward1,emergency,True,0.416,5.528,3
+"PRM (Uniform, N=300)",ward2,home,True,0.441,4.514,3
+"PRM (Uniform, N=300)",ward2,pharmacy,True,0.541,8.465,4
+"PRM (Uniform, N=300)",ward2,lab,True,0.653,10.823,5
+"PRM (Uniform, N=300)",ward2,reception,True,0.518,8.053,3
+"PRM (Uniform, N=300)",ward2,ward1,True,0.677,9.736,6
+"PRM (Uniform, N=300)",ward2,ward3,False,0.837,,
+"PRM (Uniform, N=300)",ward2,icu,False,0.834,,
+"PRM (Uniform, N=300)",ward2,emergency,True,0.466,7.282,3
+"PRM (Uniform, N=300)",ward3,home,False,0.403,,
+"PRM (Uniform, N=300)",ward3,pharmacy,False,0.385,,
+"PRM (Uniform, N=300)",ward3,lab,False,0.383,,
+"PRM (Uniform, N=300)",ward3,reception,False,0.388,,
+"PRM (Uniform, N=300)",ward3,ward1,False,0.4,,
+"PRM (Uniform, N=300)",ward3,ward2,False,0.395,,
+"PRM (Uniform, N=300)",ward3,icu,False,0.394,,
+"PRM (Uniform, N=300)",ward3,emergency,False,0.369,,
+"PRM (Uniform, N=300)",icu,home,False,0.416,,
+"PRM (Uniform, N=300)",icu,pharmacy,False,0.41,,
+"PRM (Uniform, N=300)",icu,lab,False,0.403,,
+"PRM (Uniform, N=300)",icu,reception,True,0.019,4.0,2
+"PRM (Uniform, N=300)",icu,ward1,False,0.415,,
+"PRM (Uniform, N=300)",icu,ward2,False,0.413,,
+"PRM (Uniform, N=300)",icu,ward3,False,0.417,,
+"PRM (Uniform, N=300)",icu,emergency,False,0.387,,
+"PRM (Uniform, N=300)",emergency,home,True,0.017,4.743,2
+"PRM (Uniform, N=300)",emergency,pharmacy,True,0.406,4.647,3
+"PRM (Uniform, N=300)",emergency,lab,True,0.7,10.989,6
+"PRM (Uniform, N=300)",emergency,reception,True,0.017,8.631,2
+"PRM (Uniform, N=300)",emergency,ward1,True,0.443,5.53,3
+"PRM (Uniform, N=300)",emergency,ward2,True,0.517,7.31,3
+"PRM (Uniform, N=300)",emergency,ward3,False,0.844,,
+"PRM (Uniform, N=300)",emergency,icu,False,0.877,,
+"PRM (Door-seeded, N=100)",home,pharmacy,True,0.344,5.911,3
+"PRM (Door-seeded, N=100)",home,lab,True,0.35,5.92,4
+"PRM (Door-seeded, N=100)",home,reception,True,0.016,4.0,2
+"PRM (Door-seeded, N=100)",home,ward1,True,0.348,7.855,4
+"PRM (Door-seeded, N=100)",home,ward2,True,0.33,4.652,3
+"PRM (Door-seeded, N=100)",home,ward3,True,0.309,4.652,3
+"PRM (Door-seeded, N=100)",home,icu,True,0.313,6.838,3
+"PRM (Door-seeded, N=100)",home,emergency,True,0.017,4.743,2
+"PRM (Door-seeded, N=100)",pharmacy,home,True,0.339,5.911,3
+"PRM (Door-seeded, N=100)",pharmacy,lab,True,0.438,13.564,4
+"PRM (Door-seeded, N=100)",pharmacy,reception,True,0.378,10.193,4
+"PRM (Door-seeded, N=100)",pharmacy,ward1,True,0.337,8.13,4
+"PRM (Door-seeded, N=100)",pharmacy,ward2,True,0.409,8.446,4
+"PRM (Door-seeded, N=100)",pharmacy,ward3,True,0.381,10.5,4
+"PRM (Door-seeded, N=100)",pharmacy,icu,True,0.376,12.739,4
+"PRM (Door-seeded, N=100)",pharmacy,emergency,True,0.285,4.103,3
+"PRM (Door-seeded, N=100)",lab,home,True,0.37,7.68,3
+"PRM (Door-seeded, N=100)",lab,pharmacy,True,0.429,13.564,4
+"PRM (Door-seeded, N=100)",lab,reception,True,0.335,4.236,3
+"PRM (Door-seeded, N=100)",lab,ward1,True,0.473,15.515,5
+"PRM (Door-seeded, N=100)",lab,ward2,True,0.512,12.803,5
+"PRM (Door-seeded, N=100)",lab,ward3,True,0.362,8.629,4
+"PRM (Door-seeded, N=100)",lab,icu,True,0.513,8.144,4
+"PRM (Door-seeded, N=100)",lab,emergency,True,0.393,12.419,3
+"PRM (Door-seeded, N=100)",reception,home,True,0.018,4.0,2
+"PRM (Door-seeded, N=100)",reception,pharmacy,True,0.451,9.74,4
+"PRM (Door-seeded, N=100)",reception,lab,True,0.337,4.236,3
+"PRM (Door-seeded, N=100)",reception,ward1,True,0.387,11.847,4
+"PRM (Door-seeded, N=100)",reception,ward2,True,0.397,9.075,4
+"PRM (Door-seeded, N=100)",reception,ward3,True,0.315,5.257,3
+"PRM (Door-seeded, N=100)",reception,icu,True,0.019,4.0,2
+"PRM (Door-seeded, N=100)",reception,emergency,True,0.017,8.631,2
+"PRM (Door-seeded, N=100)",ward1,home,True,0.37,7.855,4
+"PRM (Door-seeded, N=100)",ward1,pharmacy,True,0.319,8.13,4
+"PRM (Door-seeded, N=100)",ward1,lab,True,0.51,15.515,5
+"PRM (Door-seeded, N=100)",ward1,reception,True,0.412,11.847,4
+"PRM (Door-seeded, N=100)",ward1,ward2,True,0.464,11.71,6
+"PRM (Door-seeded, N=100)",ward1,ward3,True,0.445,12.234,5
+"PRM (Door-seeded, N=100)",ward1,icu,True,0.453,14.638,5
+"PRM (Door-seeded, N=100)",ward1,emergency,True,0.271,5.53,3
+"PRM (Door-seeded, N=100)",ward2,home,True,0.326,4.652,3
+"PRM (Door-seeded, N=100)",ward2,pharmacy,True,0.402,8.371,4
+"PRM (Door-seeded, N=100)",ward2,lab,True,0.462,12.803,5
+"PRM (Door-seeded, N=100)",ward2,reception,True,0.395,9.075,4
+"PRM (Door-seeded, N=100)",ward2,ward1,True,0.453,11.71,6
+"PRM (Door-seeded, N=100)",ward2,ward3,True,0.42,10.373,5
+"PRM (Door-seeded, N=100)",ward2,icu,True,0.422,11.968,5
+"PRM (Door-seeded, N=100)",ward2,emergency,True,0.347,7.35,4
+"PRM (Door-seeded, N=100)",ward3,home,True,0.303,4.652,3
+"PRM (Door-seeded, N=100)",ward3,pharmacy,True,0.38,10.5,4
+"PRM (Door-seeded, N=100)",ward3,lab,True,0.357,8.256,4
+"PRM (Door-seeded, N=100)",ward3,reception,True,0.312,5.257,3
+"PRM (Door-seeded, N=100)",ward3,ward1,True,0.404,12.234,5
+"PRM (Door-seeded, N=100)",ward3,ward2,True,0.415,9.765,5
+"PRM (Door-seeded, N=100)",ward3,icu,True,0.303,7.364,4
+"PRM (Door-seeded, N=100)",ward3,emergency,True,0.314,9.264,3
+"PRM (Door-seeded, N=100)",icu,home,True,0.313,6.838,3
+"PRM (Door-seeded, N=100)",icu,pharmacy,True,0.386,12.739,4
+"PRM (Door-seeded, N=100)",icu,lab,True,0.353,8.144,4
+"PRM (Door-seeded, N=100)",icu,reception,True,0.018,4.0,2
+"PRM (Door-seeded, N=100)",icu,ward1,True,0.411,14.638,5
+"PRM (Door-seeded, N=100)",icu,ward2,True,0.487,11.968,5
+"PRM (Door-seeded, N=100)",icu,ward3,True,0.334,7.364,4
+"PRM (Door-seeded, N=100)",icu,emergency,True,0.309,11.581,3
+"PRM (Door-seeded, N=100)",emergency,home,True,0.017,4.743,2
+"PRM (Door-seeded, N=100)",emergency,pharmacy,True,0.288,4.103,3
+"PRM (Door-seeded, N=100)",emergency,lab,True,0.365,12.419,3
+"PRM (Door-seeded, N=100)",emergency,reception,True,0.017,8.631,2
+"PRM (Door-seeded, N=100)",emergency,ward1,True,0.273,5.536,3
+"PRM (Door-seeded, N=100)",emergency,ward2,True,0.351,8.54,4
+"PRM (Door-seeded, N=100)",emergency,ward3,True,0.312,9.264,3
+"PRM (Door-seeded, N=100)",emergency,icu,True,0.305,11.581,3
+RRT Baseline (Single-Query),home,pharmacy,True,2.425,5.946,3
+RRT Baseline (Single-Query),home,lab,True,145.914,5.964,4
+RRT Baseline (Single-Query),home,reception,True,0.035,4.0,2
+RRT Baseline (Single-Query),home,ward1,True,41.739,7.546,3
+RRT Baseline (Single-Query),home,ward2,True,0.574,4.611,3
+RRT Baseline (Single-Query),home,ward3,True,0.571,4.595,3
+RRT Baseline (Single-Query),home,icu,True,22.918,6.857,3
+RRT Baseline (Single-Query),home,emergency,True,0.031,4.743,2
+RRT Baseline (Single-Query),pharmacy,home,True,0.739,5.993,3
+RRT Baseline (Single-Query),pharmacy,lab,True,5.641,13.401,4
+RRT Baseline (Single-Query),pharmacy,reception,True,26.297,11.049,3
+RRT Baseline (Single-Query),pharmacy,ward1,True,1.785,8.221,4
+RRT Baseline (Single-Query),pharmacy,ward2,True,1.522,8.503,4
+RRT Baseline (Single-Query),pharmacy,ward3,True,1.298,10.652,4
+RRT Baseline (Single-Query),pharmacy,icu,True,42.15,12.888,4
+RRT Baseline (Single-Query),pharmacy,emergency,True,6.784,4.454,3
+RRT Baseline (Single-Query),lab,home,True,37.18,6.635,3
+RRT Baseline (Single-Query),lab,pharmacy,True,8.123,11.138,7
+RRT Baseline (Single-Query),lab,reception,True,0.619,4.301,3
+RRT Baseline (Single-Query),lab,ward1,True,11.885,13.93,4
+RRT Baseline (Single-Query),lab,ward2,True,135.549,10.627,4
+RRT Baseline (Single-Query),lab,ward3,True,1.181,8.316,4
+RRT Baseline (Single-Query),lab,icu,True,2.05,8.408,5
+RRT Baseline (Single-Query),lab,emergency,True,2.578,11.061,4
+RRT Baseline (Single-Query),reception,home,True,0.026,4.0,2
+RRT Baseline (Single-Query),reception,pharmacy,True,3.098,10.066,3
+RRT Baseline (Single-Query),reception,lab,True,2.196,4.207,3
+RRT Baseline (Single-Query),reception,ward1,True,3.508,12.043,4
+RRT Baseline (Single-Query),reception,ward2,True,8.111,8.056,3
+RRT Baseline (Single-Query),reception,ward3,True,0.6,5.459,3
+RRT Baseline (Single-Query),reception,icu,True,0.028,4.0,2
+RRT Baseline (Single-Query),reception,emergency,True,0.026,8.631,2
+RRT Baseline (Single-Query),ward1,home,True,0.918,7.547,4
+RRT Baseline (Single-Query),ward1,pharmacy,False,25.984,,
+RRT Baseline (Single-Query),ward1,lab,True,27.228,13.539,6
+RRT Baseline (Single-Query),ward1,reception,True,1.893,11.952,5
+RRT Baseline (Single-Query),ward1,ward2,True,60.625,11.416,5
+RRT Baseline (Single-Query),ward1,ward3,True,4.369,12.383,5
+RRT Baseline (Single-Query),ward1,icu,True,11.837,14.516,5
+RRT Baseline (Single-Query),ward1,emergency,True,1.019,5.573,3
+RRT Baseline (Single-Query),ward2,home,True,0.519,4.634,3
+RRT Baseline (Single-Query),ward2,pharmacy,True,11.494,8.564,4
+RRT Baseline (Single-Query),ward2,lab,True,16.891,11.012,4
+RRT Baseline (Single-Query),ward2,reception,True,1.408,8.905,3
+RRT Baseline (Single-Query),ward2,ward1,True,38.979,10.272,4
+RRT Baseline (Single-Query),ward2,ward3,True,194.095,8.968,4
+RRT Baseline (Single-Query),ward2,icu,True,32.734,11.57,4
+RRT Baseline (Single-Query),ward2,emergency,True,1.119,7.901,3
+RRT Baseline (Single-Query),ward3,home,True,0.453,4.865,3
+RRT Baseline (Single-Query),ward3,pharmacy,False,25.3,,
+RRT Baseline (Single-Query),ward3,lab,True,1.266,8.349,4
+RRT Baseline (Single-Query),ward3,reception,True,22.097,6.319,3
+RRT Baseline (Single-Query),ward3,ward1,False,25.108,,
+RRT Baseline (Single-Query),ward3,ward2,False,25.254,,
+RRT Baseline (Single-Query),ward3,icu,False,25.08,,
+RRT Baseline (Single-Query),ward3,emergency,False,25.091,,
+RRT Baseline (Single-Query),icu,home,True,6.684,6.904,3
+RRT Baseline (Single-Query),icu,pharmacy,True,10.829,12.948,4
+RRT Baseline (Single-Query),icu,lab,True,62.856,8.187,4
+RRT Baseline (Single-Query),icu,reception,True,0.032,4.0,2
+RRT Baseline (Single-Query),icu,ward1,True,84.984,16.081,5
+RRT Baseline (Single-Query),icu,ward2,True,7.842,11.65,4
+RRT Baseline (Single-Query),icu,ward3,True,100.599,8.559,4
+RRT Baseline (Single-Query),icu,emergency,True,7.364,12.124,3
+RRT Baseline (Single-Query),emergency,home,True,0.028,4.743,2
+RRT Baseline (Single-Query),emergency,pharmacy,True,2.492,4.122,3
+RRT Baseline (Single-Query),emergency,lab,True,1.913,11.268,4
+RRT Baseline (Single-Query),emergency,reception,True,0.027,8.631,2
+RRT Baseline (Single-Query),emergency,ward1,True,0.915,5.544,3
+RRT Baseline (Single-Query),emergency,ward2,True,3.626,7.843,4
+RRT Baseline (Single-Query),emergency,ward3,True,2.071,9.214,3
+RRT Baseline (Single-Query),emergency,icu,True,1.663,11.506,3
+Grid A* Baseline (res=0.20m),home,pharmacy,True,3.978,5.633,3
+Grid A* Baseline (res=0.20m),home,lab,True,3.76,5.777,4
+Grid A* Baseline (res=0.20m),home,reception,True,0.019,4.0,2
+Grid A* Baseline (res=0.20m),home,ward1,True,8.83,6.938,4
+Grid A* Baseline (res=0.20m),home,ward2,True,2.889,4.528,3
+Grid A* Baseline (res=0.20m),home,ward3,True,2.755,4.528,3
+Grid A* Baseline (res=0.20m),home,icu,True,7.402,6.531,3
+Grid A* Baseline (res=0.20m),home,emergency,True,0.018,4.743,2
+Grid A* Baseline (res=0.20m),pharmacy,home,True,5.236,5.633,3
+Grid A* Baseline (res=0.20m),pharmacy,lab,True,15.181,11.041,6
+Grid A* Baseline (res=0.20m),pharmacy,reception,True,9.577,9.405,4
+Grid A* Baseline (res=0.20m),pharmacy,ward1,True,4.677,8.083,4
+Grid A* Baseline (res=0.20m),pharmacy,ward2,True,5.893,8.224,5
+Grid A* Baseline (res=0.20m),pharmacy,ward3,True,13.028,10.091,4
+Grid A* Baseline (res=0.20m),pharmacy,icu,True,19.252,12.151,4
+Grid A* Baseline (res=0.20m),pharmacy,emergency,True,3.212,3.712,3
+Grid A* Baseline (res=0.20m),lab,home,True,5.42,5.72,4
+Grid A* Baseline (res=0.20m),lab,pharmacy,True,16.044,10.993,6
+Grid A* Baseline (res=0.20m),lab,reception,True,2.219,4.197,3
+Grid A* Baseline (res=0.20m),lab,ward1,True,24.077,12.927,6
+Grid A* Baseline (res=0.20m),lab,ward2,True,14.005,10.336,5
+Grid A* Baseline (res=0.20m),lab,ward3,True,6.706,8.255,4
+Grid A* Baseline (res=0.20m),lab,icu,True,5.235,8.083,4
+Grid A* Baseline (res=0.20m),lab,emergency,True,13.181,10.23,5
+Grid A* Baseline (res=0.20m),reception,home,True,0.016,4.0,2
+Grid A* Baseline (res=0.20m),reception,pharmacy,True,13.592,9.418,4
+Grid A* Baseline (res=0.20m),reception,lab,True,2.017,4.197,3
+Grid A* Baseline (res=0.20m),reception,ward1,True,19.146,10.91,4
+Grid A* Baseline (res=0.20m),reception,ward2,True,12.512,8.034,3
+Grid A* Baseline (res=0.20m),reception,ward3,True,5.147,5.287,3
+Grid A* Baseline (res=0.20m),reception,icu,True,0.022,4.0,2
+Grid A* Baseline (res=0.20m),reception,emergency,True,0.019,8.631,2
+Grid A* Baseline (res=0.20m),ward1,home,True,5.424,6.975,4
+Grid A* Baseline (res=0.20m),ward1,pharmacy,True,4.855,8.216,4
+Grid A* Baseline (res=0.20m),ward1,lab,True,18.367,12.922,6
+Grid A* Baseline (res=0.20m),ward1,reception,True,7.721,10.961,4
+Grid A* Baseline (res=0.20m),ward1,ward2,True,8.677,8.578,6
+Grid A* Baseline (res=0.20m),ward1,ward3,True,14.334,10.927,6
+Grid A* Baseline (res=0.20m),ward1,icu,True,19.967,13.263,6
+Grid A* Baseline (res=0.20m),ward1,emergency,True,4.028,5.756,3
+Grid A* Baseline (res=0.20m),ward2,home,True,2.127,4.528,3
+Grid A* Baseline (res=0.20m),ward2,pharmacy,True,5.182,8.257,4
+Grid A* Baseline (res=0.20m),ward2,lab,True,9.986,10.141,5
+Grid A* Baseline (res=0.20m),ward2,reception,True,7.324,8.034,3
+Grid A* Baseline (res=0.20m),ward2,ward1,True,7.436,8.71,5
+Grid A* Baseline (res=0.20m),ward2,ward3,True,6.439,7.604,4
+Grid A* Baseline (res=0.20m),ward2,icu,True,10.023,10.01,4
+Grid A* Baseline (res=0.20m),ward2,emergency,True,4.793,6.914,3
+Grid A* Baseline (res=0.20m),ward3,home,True,2.292,4.528,3
+Grid A* Baseline (res=0.20m),ward3,pharmacy,True,10.395,10.091,4
+Grid A* Baseline (res=0.20m),ward3,lab,True,5.901,8.256,4
+Grid A* Baseline (res=0.20m),ward3,reception,True,3.503,5.287,3
+Grid A* Baseline (res=0.20m),ward3,ward1,True,16.037,11.032,6
+Grid A* Baseline (res=0.20m),ward3,ward2,True,7.085,7.604,4
+Grid A* Baseline (res=0.20m),ward3,icu,True,6.293,7.01,4
+Grid A* Baseline (res=0.20m),ward3,emergency,True,10.899,9.067,3
+Grid A* Baseline (res=0.20m),icu,home,True,5.464,6.531,3
+Grid A* Baseline (res=0.20m),icu,pharmacy,True,15.567,12.151,4
+Grid A* Baseline (res=0.20m),icu,lab,True,5.225,8.083,4
+Grid A* Baseline (res=0.20m),icu,reception,True,0.019,4.0,2
+Grid A* Baseline (res=0.20m),icu,ward1,True,22.68,13.246,6
+Grid A* Baseline (res=0.20m),icu,ward2,True,11.999,10.01,4
+Grid A* Baseline (res=0.20m),icu,ward3,True,6.302,7.01,4
+Grid A* Baseline (res=0.20m),icu,emergency,True,14.275,11.268,3
+Grid A* Baseline (res=0.20m),emergency,home,True,0.021,4.743,2
+Grid A* Baseline (res=0.20m),emergency,pharmacy,True,1.08,3.903,3
+Grid A* Baseline (res=0.20m),emergency,lab,True,14.155,10.265,5
+Grid A* Baseline (res=0.20m),emergency,reception,True,0.019,8.631,2
+Grid A* Baseline (res=0.20m),emergency,ward1,True,2.209,5.524,3
+Grid A* Baseline (res=0.20m),emergency,ward2,True,6.366,6.903,3
+Grid A* Baseline (res=0.20m),emergency,ward3,True,12.326,9.067,3
+Grid A* Baseline (res=0.20m),emergency,icu,True,17.289,11.268,3
