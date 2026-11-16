@@ -248,13 +248,13 @@ text(s, 1.0, 13.8, 32, 3, ["Honest trade-off: priority helps urgent orders but n
 
 # 15 --------------------------------------------------------------- contribution
 s = slide("Team Contribution", "Prachi Chetan Padodara")
-table(s, [["Member", "Presents", "Report sections", "Technical work (see report Table 13)"],
-          ["Mihika", "1–3", "Abstract, 1, 2, 13", "Client, PRM, scene, controller, RRT, experiments"],
-          ["Divyanshu Dhyani", "4–6", "3, 4", "[fill]"],
-          ["Disha Rastogi", "7–9", "5, 7", "[fill]"],
-          ["Sumit Malhotra", "10–12", "6, 8", "[fill]"],
-          ["Prachi C. Padodara", "13–15", "9, 12", "[fill]"]],
-      1.0, 3.4, [6.4, 3.4, 5.6, 16.4], size=17, row_h=2.0)
+table(s, [["Member", "Presents", "Report", "Contribution (report Table 13)"],
+          ["Mihika", "1\u20133", "Wrote all", "All code: client, PRM, scene, controller, RRT, experiments"],
+          ["Divyanshu Dhyani", "4\u20136", "Reviewed 3, 4", "Presentation of existing work, novelty, syllabus"],
+          ["Disha Rastogi", "7\u20139", "Reviewed 5, 7", "Presentation of architecture, model, PRM"],
+          ["Sumit Malhotra", "10\u201312", "Reviewed 6, 8", "Presentation of controller, setup, live demo"],
+          ["Prachi C. Padodara", "13\u201315", "Reviewed 9, 12", "Presentation of results and contribution"]],
+      1.0, 3.4, [6.0, 3.2, 5.6, 17.0], size=17, row_h=2.0)
 text(s, 1.0, 15.8, 32, 1.2, "Every claim is traceable to GitHub commits or this video", size=16, color=GREY)
 
 # 16 --------------------------------------------------------------- conclusion

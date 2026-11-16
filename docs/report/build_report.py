@@ -285,18 +285,18 @@ tab_list_anchor = new_par()
 
 page_break()
 H1("Writing Allocation")
-WA = [("M1", 0, "Abstract, 1, 2, 13 (References), Appendix"), ("M2", 1, "3, 4"), ("M3", 2, "5, 7"),
-      ("M4", 3, "6, 8"), ("M5", 4, "9, 12")]
-SEC_OF = {"M1": ["Abstract", "1.  Introduction", "2.  Problem Statement and Objectives", "References",
-                 "Appendix: Links and Logs"],
-          "M2": ["3.  Literature and Industry Review", "4.  Novelty"],
-          "M3": ["5.  Syllabus Mapping and Theory", "7.  Methodology and Algorithms"],
-          "M4": ["6.  System Design", "8.  Simulation Setup"],
-          "M5": ["9.  Results and Analysis", "12.  Conclusion and Future Scope"]}
+ALL_WRITTEN = "Abstract, 1-9, 12, 13 (References), Appendix"
+# (member, index, sections written, sections reviewed): the truthful record of who wrote what
+WA = [("M1", 0, ALL_WRITTEN, ""), ("M2", 1, "None", "3, 4"), ("M3", 2, "None", "5, 7"),
+      ("M4", 3, "None", "6, 8"), ("M5", 4, "None", "9, 12")]
+SEC_OF = {"M1": ["Abstract"] + [h for h in BODY_HEADS
+                                  if not h.startswith(("10.", "11."))]}
 
 
 def section_pages(member):
     """Approximate pages per member from the section start pages of the last PDF."""
+    if member not in SEC_OF:
+        return "-"
     if not PAGES:
         return "#"
     total = 0.0
@@ -314,13 +314,13 @@ def section_pages(member):
 t = d.add_table(rows=7, cols=4)
 t.style = "Table Grid"
 t.alignment = 1
-hdr = ["Member", "Name and SAP ID", "Sections written", "Pages"]
+hdr = ["Member", "Name and SAP ID", "Sections written (reviewed)", "Pages"]
 for j, h in enumerate(hdr):
     runs(t.cell(0, j).paragraphs[0], f"**{h}**", size=11)
-for i, (m, k, s) in enumerate(WA, 1):
+for i, (m, k, wrote, reviewed) in enumerate(WA, 1):
     runs(t.cell(i, 0).paragraphs[0], m, size=11)
     runs(t.cell(i, 1).paragraphs[0], f"{MEMBERS[k][0]} ({MEMBERS[k][1]})", size=11)
-    runs(t.cell(i, 2).paragraphs[0], f"=={s}==", size=11)
+    runs(t.cell(i, 2).paragraphs[0], wrote + (f" (reviewed {reviewed})" if reviewed else ""), size=11)
     runs(t.cell(i, 3).paragraphs[0], section_pages(m), size=11)
 runs(t.cell(6, 0).paragraphs[0], "All", size=11)
 runs(t.cell(6, 1).paragraphs[0], "Every member", size=11)
@@ -328,7 +328,6 @@ runs(t.cell(6, 2).paragraphs[0], "10 (own row), 11 (own reflection), Declaration
 runs(t.cell(6, 3).paragraphs[0], "-", size=11)
 set_widths(t, (1.6, 5.2, 6.4, 1.6))
 place(t._tbl)
-para("==Confirm this table before printing: it must show who actually wrote each section.==")
 
 # ================================================================== BODY
 ANCHOR[0] = body_sect
@@ -786,16 +785,25 @@ t.style = "Table Grid"
 t.alignment = 1
 for j, h in enumerate(["S. No.", "Name and SAP ID", "Technical contribution", "Report sections + signature"]):
     runs(t.cell(0, j).paragraphs[0], f"**{h}**", size=10)
-contrib = {0: "Command-line client, order queue (priority and FCFS), dispatcher and ZeroMQ bridge "
-              "(client/); PRM planner with door-seeded sampling and local repair (planner/); hospital scene "
-              "builder and PID controller (tools/, controller/); RRT baseline; experiments E1-E6 and figures; "
-              "integration and testing in CoppeliaSim."}
+contrib = {0: "Wrote all code: command-line client, order queue (priority and FCFS), dispatcher and ZeroMQ "
+              "bridge (client/); PRM planner with door-seeded sampling and local repair (planner/); hospital "
+              "scene builder and PID controller (tools/, controller/); RRT baseline; experiments E1-E6 and "
+              "figures; integration and testing in CoppeliaSim; presented slides 1-3 in the video.",
+           1: "Presented slides 4-6 (existing solutions, novelty, syllabus mapping) in the demonstration "
+              "video; reviewed Sections 3 and 4.",
+           2: "Presented slides 7-9 (system architecture, robot and environment model, PRM algorithm) in the "
+              "demonstration video; reviewed Sections 5 and 7.",
+           3: "Presented slides 10-12 (controller, simulation set-up) and ran the live CoppeliaSim demonstration "
+              "in the video; reviewed Sections 6 and 8.",
+           4: "Presented slides 13-15 (results and team contribution) in the demonstration video; reviewed "
+              "Sections 9 and 12."}
+sections = {0: "Wrote: " + ALL_WRITTEN, 1: "Reviewed: 3, 4", 2: "Reviewed: 5, 7", 3: "Reviewed: 6, 8",
+            4: "Reviewed: 9, 12"}
 for i, (name, sap) in enumerate(MEMBERS, 1):
     runs(t.cell(i, 0).paragraphs[0], str(i), size=10)
     runs(t.cell(i, 1).paragraphs[0], f"{name} ({sap})", size=10)
-    runs(t.cell(i, 2).paragraphs[0], contrib.get(i - 1, "==[member to fill: specific technical work, "
-                                                           "traceable to commits or the video]=="), size=10)
-    runs(t.cell(i, 3).paragraphs[0], f"=={WA[i - 1][2]}==", size=10)
+    runs(t.cell(i, 2).paragraphs[0], contrib[i - 1], size=10)
+    runs(t.cell(i, 3).paragraphs[0], sections[i - 1], size=10)
 set_widths(t, (1.2, 3.6, 7.0, 3.4))
 place(t._tbl)
 new_par()
