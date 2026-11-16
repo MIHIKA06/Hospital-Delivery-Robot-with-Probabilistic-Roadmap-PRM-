@@ -1,0 +1,137 @@
+[
+ {
+  "sampler": "uniform",
+  "n": 50,
+  "success_pct": 29.166666666666668,
+  "full_seeds": 0,
+  "n_seeds": 10,
+  "build_ms": 2.287283300000001,
+  "edges": 144.2
+ },
+ {
+  "sampler": "uniform",
+  "n": 100,
+  "success_pct": 38.88888888888889,
+  "full_seeds": 0,
+  "n_seeds": 10,
+  "build_ms": 6.2537293000000025,
+  "edges": 422.2
+ },
+ {
+  "sampler": "uniform",
+  "n": 200,
+  "success_pct": 50.0,
+  "full_seeds": 0,
+  "n_seeds": 10,
+  "build_ms": 15.120137500000007,
+  "edges": 1019.9
+ },
+ {
+  "sampler": "uniform",
+  "n": 300,
+  "success_pct": 53.888888888888886,
+  "full_seeds": 0,
+  "n_seeds": 10,
+  "build_ms": 25.933254299999962,
+  "edges": 1606.7
+ },
+ {
+  "sampler": "uniform",
+  "n": 500,
+  "success_pct": 75.0,
+  "full_seeds": 2,
+  "n_seeds": 10,
+  "build_ms": 54.92059599999995,
+  "edges": 2793.4
+ },
+ {
+  "sampler": "bridge",
+  "n": 50,
+  "success_pct": 41.38888888888889,
+  "full_seeds": 0,
+  "n_seeds": 10,
+  "build_ms": 4.992812399999957,
+  "edges": 107.9
+ },
+ {
+  "sampler": "bridge",
+  "n": 100,
+  "success_pct": 69.16666666666667,
+  "full_seeds": 2,
+  "n_seeds": 10,
+  "build_ms": 11.210437599999956,
+  "edges": 352.5
+ },
+ {
+  "sampler": "bridge",
+  "n": 200,
+  "success_pct": 71.38888888888889,
+  "full_seeds": 1,
+  "n_seeds": 10,
+  "build_ms": 25.100308400000102,
+  "edges": 868.5
+ },
+ {
+  "sampler": "bridge",
+  "n": 300,
+  "success_pct": 83.33333333333334,
+  "full_seeds": 5,
+  "n_seeds": 10,
+  "build_ms": 40.93608339999992,
+  "edges": 1421.2
+ },
+ {
+  "sampler": "bridge",
+  "n": 500,
+  "success_pct": 89.44444444444444,
+  "full_seeds": 6,
+  "n_seeds": 10,
+  "build_ms": 79.10553750000014,
+  "edges": 2643.6
+ },
+ {
+  "sampler": "door",
+  "n": 50,
+  "success_pct": 86.11111111111111,
+  "full_seeds": 7,
+  "n_seeds": 10,
+  "build_ms": 2.4700583999999637,
+  "edges": 147.2
+ },
+ {
+  "sampler": "door",
+  "n": 100,
+  "success_pct": 100.0,
+  "full_seeds": 10,
+  "n_seeds": 10,
+  "build_ms": 6.27231669999988,
+  "edges": 422
+ },
+ {
+  "sampler": "door",
+  "n": 200,
+  "success_pct": 100.0,
+  "full_seeds": 10,
+  "n_seeds": 10,
+  "build_ms": 15.37609169999996,
+  "edges": 1005.4
+ },
+ {
+  "sampler": "door",
+  "n": 300,
+  "success_pct": 100.0,
+  "full_seeds": 10,
+  "n_seeds": 10,
+  "build_ms": 26.5740085,
+  "edges": 1592.3
+ },
+ {
+  "sampler": "door",
+  "n": 500,
+  "success_pct": 100.0,
+  "full_seeds": 10,
+  "n_seeds": 10,
+  "build_ms": 57.3238249000001,
+  "edges": 2776
+ }
+]

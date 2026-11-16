@@ -1,0 +1,53 @@
+[
+ {
+  "blocker": "bed in upper corridor",
+  "rect": [
+   -1.9,
+   0.6,
+   0.5,
+   1.2
+  ],
+  "nodes_removed": 10,
+  "edges_removed": 86,
+  "repair_ms": 2.697082999999989,
+  "rebuild_ms": 26.550292000000002,
+  "old_routes_now_blocked": 34,
+  "success_after": 72,
+  "pairs": 72,
+  "mean_extra_len_m": 0.6993888595727703
+ },
+ {
+  "blocker": "trolleys in lower corridor",
+  "rect": [
+   -0.6,
+   -3.4,
+   1.9,
+   -2.6
+  ],
+  "nodes_removed": 9,
+  "edges_removed": 81,
+  "repair_ms": 3.5057920000000076,
+  "rebuild_ms": 26.10420799999999,
+  "old_routes_now_blocked": 33,
+  "success_after": 72,
+  "pairs": 72,
+  "mean_extra_len_m": 0.9675638159518342
+ },
+ {
+  "blocker": "cleaning cart near ward 1",
+  "rect": [
+   0.3,
+   3.0,
+   1.9,
+   3.6
+  ],
+  "nodes_removed": 5,
+  "edges_removed": 43,
+  "repair_ms": 3.4994999999999887,
+  "rebuild_ms": 26.069209000000036,
+  "old_routes_now_blocked": 13,
+  "success_after": 72,
+  "pairs": 72,
+  "mean_extra_len_m": 0.10883828568243369
+ }
+]

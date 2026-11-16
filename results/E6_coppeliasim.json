@@ -1,0 +1,132 @@
+{
+ "simulator": "CoppeliaSim Edu 4.10 (macOS arm64), scene/hospital.ttt, Pioneer P3-DX",
+ "tour": [
+  {
+   "goal": "pharmacy",
+   "ok": true,
+   "path_m": 5.78,
+   "sim_s": 16.9,
+   "rms_xte_m": 0.035,
+   "max_xte_m": 0.129,
+   "end_err_m": 0.094
+  },
+  {
+   "goal": "ward1",
+   "ok": true,
+   "path_m": 8.04,
+   "sim_s": 23.2,
+   "rms_xte_m": 0.022,
+   "max_xte_m": 0.08,
+   "end_err_m": 0.095
+  },
+  {
+   "goal": "lab",
+   "ok": true,
+   "path_m": 13.4,
+   "sim_s": 37.8,
+   "rms_xte_m": 0.031,
+   "max_xte_m": 0.138,
+   "end_err_m": 0.098
+  },
+  {
+   "goal": "icu",
+   "ok": true,
+   "path_m": 8.02,
+   "sim_s": 23.1,
+   "rms_xte_m": 0.023,
+   "max_xte_m": 0.085,
+   "end_err_m": 0.096
+  },
+  {
+   "goal": "emergency",
+   "ok": true,
+   "path_m": 11.42,
+   "sim_s": 30.2,
+   "rms_xte_m": 0.027,
+   "max_xte_m": 0.141,
+   "end_err_m": 0.095
+  },
+  {
+   "goal": "ward3",
+   "ok": true,
+   "path_m": 9.01,
+   "sim_s": 25.5,
+   "rms_xte_m": 0.026,
+   "max_xte_m": 0.088,
+   "end_err_m": 0.096
+  },
+  {
+   "goal": "reception",
+   "ok": true,
+   "path_m": 5.32,
+   "sim_s": 17.4,
+   "rms_xte_m": 0.032,
+   "max_xte_m": 0.099,
+   "end_err_m": 0.095
+  },
+  {
+   "goal": "ward2",
+   "ok": true,
+   "path_m": 7.92,
+   "sim_s": 23.0,
+   "rms_xte_m": 0.027,
+   "max_xte_m": 0.112,
+   "end_err_m": 0.096
+  },
+  {
+   "goal": "home",
+   "ok": true,
+   "path_m": 4.42,
+   "sim_s": 15.2,
+   "rms_xte_m": 0.029,
+   "max_xte_m": 0.084,
+   "end_err_m": 0.097
+  }
+ ],
+ "client_orders": [
+  {
+   "order_id": "3",
+   "priority": "URGENT",
+   "item": "insulin",
+   "pickup": "pharmacy",
+   "dropoff": "icu",
+   "status": "done",
+   "wait_s": "0.0",
+   "run_s": "57.747",
+   "plan_time_s": "0.0549",
+   "path_length_m": "18.178",
+   "note": ""
+  },
+  {
+   "order_id": "1",
+   "priority": "normal",
+   "item": "antibiotics",
+   "pickup": "pharmacy",
+   "dropoff": "ward1",
+   "status": "done",
+   "wait_s": "57.749",
+   "run_s": "64.777",
+   "plan_time_s": "0.0033",
+   "path_length_m": "20.43",
+   "note": ""
+  },
+  {
+   "order_id": "2",
+   "priority": "normal",
+   "item": "blood_sample",
+   "pickup": "lab",
+   "dropoff": "ward3",
+   "status": "done",
+   "wait_s": "122.527",
+   "run_s": "71.598",
+   "plan_time_s": "0.0065",
+   "path_length_m": "21.938",
+   "note": ""
+  }
+ ],
+ "estop_latency_s": [
+  0.08,
+  0.06,
+  0.09
+ ]
+}
