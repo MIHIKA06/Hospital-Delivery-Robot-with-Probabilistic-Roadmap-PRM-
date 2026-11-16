@@ -1,0 +1,45 @@
+{
+ "figures": [
+  "Figure 1:  System architecture of the hospital delivery robot",
+  "Figure 2:  Hospital scene in CoppeliaSim generated from the floor-plan map (blue discs: delivery locations; robot at home)",
+  "Figure 3:  Flowchart of the PRM planner",
+  "Figure 4:  Route success against roadmap size for the three samplers",
+  "Figure 5:  Door-seeded roadmap (n = 300) and three example routes",
+  "Figure 6:  Cumulative planning time for 200 random orders",
+  "Figure 7:  Mean waiting time of urgent and normal orders under FCFS and priority dispatch",
+  "Figure 8:  Example route pharmacy to ICU with noise and slip: path and cross-track error",
+  "Figure 9:  Roadmap after the lower corridor is blocked (red); routes detour around it"
+ ],
+ "tables": [
+  "Table 1:  Comparison of existing approaches",
+  "Table 2:  Mapping of AISR syllabus topics to the project",
+  "Table 3:  Named delivery locations",
+  "Table 4:  Software modules (GitHub repository)",
+  "Table 5:  Controller parameters",
+  "Table 6:  Simulation set-up and parameters",
+  "Table 7:  Route success over 72 location pairs (in brackets: seeds with all pairs connected)",
+  "Table 8:  PRM against RRT on the same 72 queries (mean of 5 seeds)",
+  "Table 9:  Mean waiting time of orders (30 trials of 40 orders, 25% urgent)",
+  "Table 10:  Controller performance on the kinematic model",
+  "Table 11:  Local roadmap repair against full rebuild",
+  "Table 12:  Nine-leg delivery tour in CoppeliaSim with the PRM and PID controller",
+  "Table 13:  Technical contribution of each member",
+  "Table 14:  Meeting log"
+ ],
+ "heads": [
+  "1.  Introduction",
+  "2.  Problem Statement and Objectives",
+  "3.  Literature and Industry Review",
+  "4.  Novelty",
+  "5.  Syllabus Mapping and Theory",
+  "6.  System Design",
+  "7.  Methodology and Algorithms",
+  "8.  Simulation Setup",
+  "9.  Results and Analysis",
+  "10.  Contribution",
+  "11.  Co-learning Reflection",
+  "12.  Conclusion and Future Scope",
+  "References",
+  "Appendix: Links and Logs"
+ ]
+}
