@@ -56,6 +56,7 @@ for h in items["heads"]:
 for e in items["figures"] + items["tables"]:
     key = e.split(":")[0]
     res[key] = label(find(key + ":", body0))
+res["_last"] = label(n - 1)
 json.dump(res, open(out, "w"), indent=1)
 print(f"{n} pages; body starts on PDF page {body0 + 1}")
 print(res)

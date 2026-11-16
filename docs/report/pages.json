@@ -8,13 +8,13 @@
  "3.  Literature and Industry Review": "3",
  "4.  Novelty": "5",
  "5.  Syllabus Mapping and Theory": "6",
- "6.  System Design": "7",
+ "6.  System Design": "8",
  "7.  Methodology and Algorithms": "10",
  "8.  Simulation Setup": "12",
  "9.  Results and Analysis": "13",
  "10.  Contribution": "20",
  "11.  Co-learning Reflection": "21",
- "12.  Conclusion and Future Scope": "21",
+ "12.  Conclusion and Future Scope": "22",
  "References": "22",
  "Appendix: Links and Logs": "23",
  "Figure 1": "8",
@@ -39,5 +39,6 @@
  "Table 11": "18",
  "Table 12": "19",
  "Table 13": "20",
- "Table 14": "23"
+ "Table 14": "24",
+ "_last": "24"
 }

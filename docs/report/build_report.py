@@ -32,6 +32,12 @@ MEMBERS = [("Mihika", "500122055"), ("Divyanshu Dhyani", "500122522"),
            ("Prachi Chetan Padodara", "500126371")]
 REPO = "https://github.com/MIHIKA06/Hospital-Delivery-Robot-with-Probabilistic-Roadmap-PRM-"
 
+BODY_HEADS = ["1.  Introduction", "2.  Problem Statement and Objectives", "3.  Literature and Industry Review",
+              "4.  Novelty", "5.  Syllabus Mapping and Theory", "6.  System Design",
+              "7.  Methodology and Algorithms", "8.  Simulation Setup", "9.  Results and Analysis",
+              "10.  Contribution", "11.  Co-learning Reflection", "12.  Conclusion and Future Scope",
+              "References", "Appendix: Links and Logs"]
+
 E1, E2, E3, E4, E5, E6 = (J("E1_samplers.json"), J("E2_prm_vs_rrt.json"), J("E3_dispatch.json"),
                           J("E4_controller.json"), J("E5_blocked.json"), J("E6_coppeliasim.json"))
 
@@ -266,11 +272,7 @@ for text, key in [("Declaration", "Declaration"), ("Abstract", "Abstract"),
                   ("List of Figures", "List of Figures"), ("List of Tables", "List of Figures"),
                   ("Writing Allocation", "Writing Allocation")]:
     toc_line(text, key, bold=True)
-BODY_HEADS = ["1.  Introduction", "2.  Problem Statement and Objectives", "3.  Literature and Industry Review",
-              "4.  Novelty", "5.  Syllabus Mapping and Theory", "6.  System Design",
-              "7.  Methodology and Algorithms", "8.  Simulation Setup", "9.  Results and Analysis",
-              "10.  Contribution", "11.  Co-learning Reflection", "12.  Conclusion and Future Scope",
-              "References", "Appendix: Links and Logs"]
+
 for h in BODY_HEADS:
     toc_line(h, h, bold=True)
 
@@ -285,6 +287,30 @@ page_break()
 H1("Writing Allocation")
 WA = [("M1", 0, "Abstract, 1, 2, 13 (References), Appendix"), ("M2", 1, "3, 4"), ("M3", 2, "5, 7"),
       ("M4", 3, "6, 8"), ("M5", 4, "9, 12")]
+SEC_OF = {"M1": ["Abstract", "1.  Introduction", "2.  Problem Statement and Objectives", "References",
+                 "Appendix: Links and Logs"],
+          "M2": ["3.  Literature and Industry Review", "4.  Novelty"],
+          "M3": ["5.  Syllabus Mapping and Theory", "7.  Methodology and Algorithms"],
+          "M4": ["6.  System Design", "8.  Simulation Setup"],
+          "M5": ["9.  Results and Analysis", "12.  Conclusion and Future Scope"]}
+
+
+def section_pages(member):
+    """Approximate pages per member from the section start pages of the last PDF."""
+    if not PAGES:
+        return "#"
+    total = 0.0
+    for h in SEC_OF[member]:
+        if h == "Abstract":
+            total += 1
+            continue
+        i = BODY_HEADS.index(h)
+        start = int(PAGES[h])
+        end = int(PAGES[BODY_HEADS[i + 1]]) if i + 1 < len(BODY_HEADS) else int(PAGES["_last"]) + 1
+        total += max(0.5, end - start)
+    return f"{total:g}"
+
+
 t = d.add_table(rows=7, cols=4)
 t.style = "Table Grid"
 t.alignment = 1
@@ -295,7 +321,7 @@ for i, (m, k, s) in enumerate(WA, 1):
     runs(t.cell(i, 0).paragraphs[0], m, size=11)
     runs(t.cell(i, 1).paragraphs[0], f"{MEMBERS[k][0]} ({MEMBERS[k][1]})", size=11)
     runs(t.cell(i, 2).paragraphs[0], f"=={s}==", size=11)
-    runs(t.cell(i, 3).paragraphs[0], "==  ==", size=11)
+    runs(t.cell(i, 3).paragraphs[0], section_pages(m), size=11)
 runs(t.cell(6, 0).paragraphs[0], "All", size=11)
 runs(t.cell(6, 1).paragraphs[0], "Every member", size=11)
 runs(t.cell(6, 2).paragraphs[0], "10 (own row), 11 (own reflection), Declaration", size=11)
@@ -451,6 +477,8 @@ items([f"**Door-seeded sampling.** The planner uses the known floor plan to put 
        f"time (Table 8, Figure 6)."])
 
 H1("5.  Syllabus Mapping and Theory")
+para("Table 2 maps each AISR syllabus topic used in this project to the part of the system where it "
+     "is used. The theory behind the main topics is given in Sections 5.1 to 5.5.")
 table([["AISR syllabus topic", "Where it is used in this project"],
        ["Probabilistic path planning", "PRM learning and query phases, samplers, roadmap repair (planner/prm.py)"],
        ["Planning to move", "A* search on the roadmap, path smoothing, pickup and drop-off legs"],
@@ -531,6 +559,7 @@ table([["Location", "(x, y) m", "Location", "(x, y) m"],
        ["emergency", "(−1.5, 4.5)", "", ""]],
       "Named delivery locations", widths=[3.0, 3.4, 3.0, 3.4])
 H2("6.3 Software architecture")
+para("Table 4 lists the software modules, their files in the GitHub repository and their roles.")
 table([["Module", "Files", "Role"],
        ["Command-line client", "client/client.py, orders.py", "Shell commands, priority/FCFS order queue"],
        ["Dispatcher", "client/dispatcher.py", "Serves orders: plan and drive each leg, log results"],
@@ -616,6 +645,7 @@ para("The dispatcher thread repeatedly takes the next order from the queue (urge
      "stop. A lock protects the roadmap so that a block command cannot change it in the middle of a query.")
 
 H1("8.  Simulation Setup")
+para("Table 6 lists the simulation platform and all parameters used in the experiments of Section 9.")
 table([["Item", "Setting"],
        ["Simulator", "CoppeliaSim Edu 4.10.0 (macOS, Apple silicon), Bullet physics, 50 ms step"],
        ["Robot", "Pioneer P3-DX (built-in model, demo script removed)"],
@@ -690,6 +720,9 @@ para("We simulated one robot serving random orders whose travel times come from 
      "waited too long) so that normal orders are never starved.")
 H2("9.4 Path following (E4)")
 i_, n_ = E4["ideal"], E4["noise_and_slip"]
+para("Every one of the 72 PRM routes was followed with the controller on the kinematic model of Eq. (3), "
+     "first ideal and then with heading noise and wheel slip. Table 10 summarises the results, and "
+     "Figure 8 shows one route in detail.")
 table([["Metric (72 routes)", "Ideal model", "With 2° heading noise and 5% wheel slip"],
        ["Routes completed", f"{i_['arrived']}/72", f"{n_['arrived']}/72"],
        ["Mean RMS cross-track error", f"{fmt(100 * i_['rms_mean_m'])} cm", f"{fmt(100 * n_['rms_mean_m'])} cm"],
@@ -716,6 +749,8 @@ para("Each blockage invalidated between 13 and 34 of the existing routes, but af
      "27 ms for a full rebuild. The difference matters more on larger maps, where rebuilding grows with the "
      "number of nodes while the repair only touches the area around the obstacle.")
 H2("9.6 Full system in CoppeliaSim (E6)")
+para("Finally, the complete system was run in CoppeliaSim with the hospital scene of Figure 2. Table 12 "
+     "lists a nine-leg tour through all locations, planned by the PRM and driven by the PID controller.")
 rows = [["Leg (from previous stop)", "Path length", "Sim time", "RMS error", "Max error", "Final error"]]
 for leg in E6["tour"]:
     rows.append([f"→ {leg['goal']}", f"{fmt(leg['path_m'], 2)} m", f"{fmt(leg['sim_s'])} s",
@@ -766,9 +801,21 @@ place(t._tbl)
 new_par()
 
 H1("11.  Co-learning Reflection")
+REFLECTIONS = {
+    "Mihika": "I learned CoppeliaSim and its ZeroMQ remote API on my own, starting from a robot that drove off "
+              "the edge of the default floor and ending with a full hospital scene generated from our map. "
+              "Building the command-line client taught me how to keep a simulator connection in one thread "
+              "while the shell stays responsive. When team-mates were unwell or could not run the simulator, I "
+              "also wrote the PRM planner and the controller, which made me understand the narrow-door problem "
+              "and PID tuning in depth. From the team I learned to agree on small interfaces first, so that "
+              "modules fit together. I explained the client, the PRM and the controller to the team so that "
+              "everyone can answer questions on the whole system.",
+}
 for name, _ in MEMBERS:
-    para(f"**{name}:** ==[5-8 lines written by {name.split()[0]}: what I learned on my own, what I learned "
-         f"from team-mates, and what I taught others.]==")
+    first_name = name.split()[0]
+    txt = REFLECTIONS.get(name, f"==[5-8 lines written by {first_name}: what I learned on my own, what I "
+                                f"learned from team-mates, and what I taught others.]==")
+    para(f"**{name}:** {txt}")
 
 H1("12.  Conclusion and Future Scope")
 para("We built a complete hospital delivery robot system in CoppeliaSim around a probabilistic roadmap. A "
@@ -820,7 +867,7 @@ for i, ref in enumerate(REFS, 1):
 H1("Appendix: Links and Logs")
 para(f"**GitHub repository:** {REPO}")
 para("**YouTube video (Unlisted):** ==https://youtu.be/<paste link after upload>==")
-para("**Meeting log**")
+para("**Meeting log.** Table 14 records the team meetings: date, duration, attendees and decisions.")
 TAB[0] += 1
 c = new_par("Caption"); c.paragraph_format.keep_with_next = True
 c.add_run(f"Table {TAB[0]}: "); c.add_run("Meeting log")
