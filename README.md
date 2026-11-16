@@ -75,6 +75,28 @@ Sumit could not run CoppeliaSim on his laptop, so Mihika built this module on he
 
 CoppeliaSim tour (`test_controller_sim.py --fast`, door sampler): all 9 legs reached the goal. RMS cross-track error was 0.022–0.035 m, maximum 0.14 m (at corners), and final position error under 0.10 m. The full `examples_orders.txt` batch also ran in the simulator: all 5 orders were done, and the urgent ones were served first.
 
+## Baseline and experiments
+
+- `baseline/rrt.py` is a single-query RRT that uses the same map and collision checks as the PRM. Run the client with it using `python3 -m client --planner rrt`.
+- `python3 -m client --fifo` serves orders first-come-first-served. This is the baseline for the priority experiment.
+- `python3 -m experiments.run_experiments` runs E1-E5 and writes `results/E*.json` (about 30 s). `python3 -m experiments.make_figures` draws the figures.
+- E6 (CoppeliaSim tour, client orders, emergency stop) is in `results/E6_coppeliasim.json`, measured with `tools/test_controller_sim.py --fast` and the client.
+
+| Experiment | Main result |
+|---|---|
+| E1 samplers | door-seeded: 100% of 72 routes from n = 100; uniform 54%, bridge 83% at n = 300 |
+| E2 PRM vs RRT | 0.37 ms vs 43.6 ms per route; 200 orders 0.11 s vs 9.3 s; PRM paths 4% shorter |
+| E3 dispatch | urgent orders wait 52 / 79 / 88% less than FCFS at low / medium / high load; normal orders wait longer |
+| E4 controller | 72/72 routes, mean RMS cross-track error 1.8 cm (also with noise and slip) |
+| E5 blocked corridor | 72/72 routes after local repair, about 3 ms vs 27 ms for a full rebuild |
+| E6 CoppeliaSim | 9/9 tour legs, RMS 2.2-3.5 cm, final error < 0.10 m; emergency stop 0.06-0.09 s |
+
+## Report and slides
+
+- `docs/report/AISR_P05_G06_Report.pdf` / `.docx` is the full report in the AISR sample template (30 pages). Rebuild it with `sh docs/report/make_report.sh "<path to AISR_Sample_Project_Report.docx>"`.
+- `docs/slides/AISR_P05_G06_Slides.pdf` / `.pptx` is the 17-slide deck. Rebuild it with `python3 docs/slides/build_slides.py`.
+- `docs/SUBMISSION_CHECKLIST.md` lists what is still to do before submission.
+
 ## Interfaces between modules
 
 - **`planner/prm.py`** must provide `plan(start, goal) -> list[(x, y)] | None`.
