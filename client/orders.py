@@ -40,7 +40,11 @@ class Order:
 
 
 class OrderQueue:
-    def __init__(self) -> None:
+    """Priority queue of orders. With fifo=True priorities are ignored (plain
+    first-come-first-served), which is the baseline for the priority experiment."""
+
+    def __init__(self, fifo: bool = False) -> None:
+        self.fifo = fifo
         self._heap: list = []
         self._seq = itertools.count()
         self._ids = itertools.count(1)
@@ -52,7 +56,8 @@ class OrderQueue:
             item: str = "package") -> Order:
         with self._lock:
             order = Order(next(self._ids), pickup, dropoff, priority, item)
-            heapq.heappush(self._heap, (priority, next(self._seq), order))
+            key = 0 if self.fifo else priority
+            heapq.heappush(self._heap, (key, next(self._seq), order))
             self.history.append(order)
             self._not_empty.notify()
             return order

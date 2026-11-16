@@ -206,10 +206,34 @@ class PRM:
         return out
 
     # ---- dynamic change: blocked corridor (re-planning support)
-    def add_obstacle(self, rect: Rect) -> Tuple[int, int]:
-        """Add an obstacle (e.g. a bed blocking a corridor) and remove the nodes
-        and edges it invalidates, without rebuilding the roadmap.
+    def add_obstacle(self, rect: Rect, resample: int = 40, margin: float = 1.0) -> Tuple[int, int]:
+        """Add an obstacle (e.g. a bed blocking a corridor) and repair the roadmap
+        locally instead of rebuilding it:
+          1. remove the nodes and edges the obstacle invalidates;
+          2. draw `resample` new samples in a band of `margin` metres around it
+             and connect them, so gaps left beside the obstacle are found again.
         Returns (nodes_removed, edges_removed)."""
+        removed = self._remove_invalid(rect)
+        x0, y0, x1, y1 = rect
+        m = margin + self.r
+        lo_x, hi_x = max(self.bounds[0], x0 - m), min(self.bounds[2], x1 + m)
+        lo_y, hi_y = max(self.bounds[1], y0 - m), min(self.bounds[3], y1 + m)
+        new_ids = []
+        for _ in range(resample):
+            p = (self.rng.uniform(lo_x, hi_x), self.rng.uniform(lo_y, hi_y))
+            if point_free(p, self.cobs, self.bounds):
+                self.nodes.append(p)
+                new_ids.append(len(self.nodes) - 1)
+                self.adj[new_ids[-1]] = {}
+        for i in new_ids:
+            for j in self._neighbours(self.nodes[i], exclude=i):
+                if j not in self.adj[i] and edge_free(self.nodes[i], self.nodes[j], self.cobs):
+                    d = math.dist(self.nodes[i], self.nodes[j])
+                    self.adj[i][j] = d
+                    self.adj[j][i] = d
+        return removed
+
+    def _remove_invalid(self, rect: Rect) -> Tuple[int, int]:
         self.obstacles.append(rect)
         box = inflate([rect], self.r)[0]
         self.cobs.append(box)

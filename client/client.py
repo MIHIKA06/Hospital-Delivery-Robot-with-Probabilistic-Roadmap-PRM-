@@ -176,11 +176,18 @@ def main(argv=None) -> int:
     ap.add_argument("--port", type=int, default=config.ZMQ_PORT)
     ap.add_argument("--batch", help="file with one shell command per line")
     ap.add_argument("--log", default=config.ORDER_LOG_CSV, help="CSV log of orders")
+    ap.add_argument("--fifo", action="store_true",
+                    help="ignore priorities (first-come-first-served baseline)")
+    ap.add_argument("--planner", choices=["prm", "rrt"], default="prm",
+                    help="route planner (rrt = single-query baseline)")
     args = ap.parse_args(argv)
 
     bridge = DryRunBridge() if args.dry_run else RealBridge(args.host, args.port)
-    queue = OrderQueue()
+    queue = OrderQueue(fifo=args.fifo)
     dispatcher = Dispatcher(queue, bridge, args.log)
+    if args.planner == "rrt":
+        from baseline.rrt import plan as rrt_plan
+        dispatcher.plan, dispatcher.planner_name = rrt_plan, "RRT baseline (baseline/rrt.py)"
     dispatcher.start()
     dispatcher.ready.wait()
     if dispatcher.error:
@@ -192,6 +199,7 @@ def main(argv=None) -> int:
     print(f"Planner    : {dispatcher.planner_name}")
     print(f"Follower   : {bridge.follower_name}")
     print(f"Order log  : {args.log}")
+    print(f"Dispatch   : {'first-come-first-served' if args.fifo else 'priority (urgent first)'}")
 
     if args.batch:
         shell = HospitalShell(queue, dispatcher, stdin=open(args.batch))
