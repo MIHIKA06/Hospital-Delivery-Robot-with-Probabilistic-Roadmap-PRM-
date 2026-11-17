@@ -287,8 +287,11 @@ page_break()
 H1("Writing Allocation")
 ALL_WRITTEN = "Abstract, 1-9, 12, 13 (References), Appendix"
 # (member, index, sections written, sections reviewed): the truthful record of who wrote what
-WA = [("M1", 0, ALL_WRITTEN, ""), ("M2", 1, "None", "3, 4"), ("M3", 2, "None", "5, 7"),
-      ("M4", 3, "None", "6, 8"), ("M5", 4, "None", "9, 12")]
+WA = [("M1", 0, "Wrote " + ALL_WRITTEN + "; presented 1, 2 (slides 1-3)"),
+      ("M2", 1, "Presented and reviewed 3, 4, 5 (slides 4-6)"),
+      ("M3", 2, "Presented and reviewed 6, 7 (slides 7-9)"),
+      ("M4", 3, "Presented and reviewed 7, 8 (slides 10-11, demo)"),
+      ("M5", 4, "Presented and reviewed 9, 10 (slides 13-15)")]
 SEC_OF = {"M1": ["Abstract"] + [h for h in BODY_HEADS
                                   if not h.startswith(("10.", "11."))]}
 
@@ -314,19 +317,19 @@ def section_pages(member):
 t = d.add_table(rows=7, cols=4)
 t.style = "Table Grid"
 t.alignment = 1
-hdr = ["Member", "Name and SAP ID", "Sections written (reviewed)", "Pages"]
+hdr = ["Member", "Name and SAP ID", "Sections written / presented and reviewed", "Pages written"]
 for j, h in enumerate(hdr):
     runs(t.cell(0, j).paragraphs[0], f"**{h}**", size=11)
-for i, (m, k, wrote, reviewed) in enumerate(WA, 1):
+for i, (m, k, wrote) in enumerate(WA, 1):
     runs(t.cell(i, 0).paragraphs[0], m, size=11)
     runs(t.cell(i, 1).paragraphs[0], f"{MEMBERS[k][0]} ({MEMBERS[k][1]})", size=11)
-    runs(t.cell(i, 2).paragraphs[0], wrote + (f" (reviewed {reviewed})" if reviewed else ""), size=11)
+    runs(t.cell(i, 2).paragraphs[0], wrote, size=11)
     runs(t.cell(i, 3).paragraphs[0], section_pages(m), size=11)
 runs(t.cell(6, 0).paragraphs[0], "All", size=11)
 runs(t.cell(6, 1).paragraphs[0], "Every member", size=11)
-runs(t.cell(6, 2).paragraphs[0], "10 (own row), 11 (own reflection), Declaration", size=11)
+runs(t.cell(6, 2).paragraphs[0], "12 presented together (slide 16); 10 and 11 own rows; Declaration", size=11)
 runs(t.cell(6, 3).paragraphs[0], "-", size=11)
-set_widths(t, (1.6, 5.2, 6.4, 1.6))
+set_widths(t, (2.0, 4.6, 6.6, 1.6))
 place(t._tbl)
 
 # ================================================================== BODY
@@ -790,15 +793,15 @@ contrib = {0: "Wrote all code: command-line client, order queue (priority and FC
               "scene builder and PID controller (tools/, controller/); RRT baseline; experiments E1-E6 and "
               "figures; integration and testing in CoppeliaSim; presented slides 1-3 in the video.",
            1: "Presented slides 4-6 (existing solutions, novelty, syllabus mapping) in the demonstration "
-              "video; reviewed Sections 3 and 4.",
+              "video; reviewed Sections 3, 4 and 5.",
            2: "Presented slides 7-9 (system architecture, robot and environment model, PRM algorithm) in the "
-              "demonstration video; reviewed Sections 5 and 7.",
-           3: "Presented slides 10-12 (controller, simulation set-up) and explained the live CoppeliaSim demonstration "
-              "in the video; reviewed Sections 6 and 8.",
+              "demonstration video; reviewed Sections 6 and 7.",
+           3: "Presented slides 10-11 (controller, simulation set-up) and explained the live CoppeliaSim demonstration "
+              "in the video; reviewed Sections 7 and 8.",
            4: "Presented slides 13-15 (results and team contribution) in the demonstration video; reviewed "
-              "Sections 9 and 12."}
-sections = {0: "Wrote: " + ALL_WRITTEN, 1: "Reviewed: 3, 4", 2: "Reviewed: 5, 7", 3: "Reviewed: 6, 8",
-            4: "Reviewed: 9, 12"}
+              "Sections 9 and 10."}
+sections = {0: "Wrote: " + ALL_WRITTEN, 1: "Presented and reviewed: 3, 4, 5", 2: "Presented and reviewed: 6, 7",
+            3: "Presented and reviewed: 7, 8", 4: "Presented and reviewed: 9, 10"}
 for i, (name, sap) in enumerate(MEMBERS, 1):
     runs(t.cell(i, 0).paragraphs[0], str(i), size=10)
     runs(t.cell(i, 1).paragraphs[0], f"{name} ({sap})", size=10)
@@ -823,20 +826,20 @@ REFLECTIONS = {
                         "On my own branch I also tried RRT and grid A* baselines with a small benchmark, which "
                         "showed me why reusing a roadmap is so much faster than planning every order from "
                         "scratch. From Mihika I learned how the planner is connected to the client and the "
-                        "simulator. I reviewed Sections 3 and 4 and explained the literature to the team.",
+                        "simulator. I reviewed Sections 3, 4 and 5 and explained the literature to the team.",
     "Disha Rastogi": "Mihika wrote the PRM code. I studied the system architecture, the robot model and the PRM algorithm in detail so that "
                      "I could present them, and I learned how configuration-space inflation turns a 1 m door "
-                     "into a 0.4 m passage. I reviewed Sections 5 and 7, and I learned from Mihika how the "
+                     "into a 0.4 m passage. I reviewed Sections 6 and 7, and I learned from Mihika how the "
                      "learning and query phases of the planner work in our code.",
     "Sumit Malhotra": "I learned how a differential-drive robot follows a path: the carrot point on the current "
                       "segment, the PID controller on the heading error and the safety stops. I explained the "
                       "controller and the simulation setup in the video, and I described the live CoppeliaSim "
-                      "demonstration while Mihika typed the commands. I reviewed Sections 6 and 8, and from the "
+                      "demonstration while Mihika typed the commands. I reviewed Sections 7 and 8, and from the "
                       "team I learned how to run the client and read the robot's status.",
     "Prachi Chetan Padodara": "I studied our experiments in order to present the results: the sampler "
                               "comparison, PRM against RRT, priority dispatch and the CoppeliaSim runs. I learned "
                               "to read the numbers honestly, for example that urgent orders wait less but normal "
-                              "orders wait longer. I reviewed Sections 9 and 12, presented the results and team "
+                              "orders wait longer. I reviewed Sections 9 and 10, presented the results and team "
                               "contribution slides, and learned from Mihika how each experiment was run.",
 }
 for name, _ in MEMBERS:
