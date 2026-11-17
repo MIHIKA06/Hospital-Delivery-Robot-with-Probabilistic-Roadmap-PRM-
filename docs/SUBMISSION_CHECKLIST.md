@@ -10,7 +10,7 @@
   - Writing Allocation: who really wrote each section, and page counts
   - Section 10: each member's own technical contribution (must match their commits or the video)
   - Section 11: each member's own 5-8 line reflection
-  - Appendix: YouTube link and meeting-log rows
+  - Appendix: meeting-log rows (YouTube link done)
 - [ ] Slide 15: each member's technical work; slide 17: e-mails
 - [ ] Every member reads the whole report and can explain every part (viva)
 - [ ] Record the 20-minute online meeting (18-22 min accepted):
@@ -18,7 +18,7 @@
   - [ ] start: each member says their name and SAP ID
   - [ ] about 14 min slides (about 3-4 min per member) + about 6 min live CoppeliaSim demo (slide 12)
   - [ ] no cuts in the middle
-- [ ] Upload to YouTube as **Unlisted** (not Public, not Private)
+- [x] Upload to YouTube as **Unlisted**: https://youtu.be/S365_Npse0U
 - [ ] Each member fills a peer-assessment sheet individually
 - [ ] Print the report single-sided, spiral or soft bound; every member signs the Declaration and their row in Section 10; attach the peer-assessment sheets
 - [ ] Team lead submits the Google Form: report PDF, slides PDF, GitHub link, YouTube link

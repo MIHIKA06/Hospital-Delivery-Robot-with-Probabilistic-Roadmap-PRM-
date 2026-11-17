@@ -5,6 +5,8 @@ Platform: CoppeliaSim (OMPL plugin) + Python command-line client via the ZeroMQ 
 
 Building a PRM over a hospital floor plan and planning routes between the wards and the pharmacy. Delivery orders are sent to the robot from a Python command-line client.
 
+**Video presentation and demo:** https://youtu.be/S365_Npse0U
+
 ## Team and modules
 
 | Member | SAP ID | Module | Folder |

@@ -162,7 +162,7 @@ table(s, [["AISR topic", "Where we use it"],
 
 # 7 ---------------------------------------------------------------- architecture
 s = slide("System Architecture", "Disha Rastogi")
-pic(s, "fig_architecture.png", 1.0, 3.2, w=31.8)
+pic(s, "fig_architecture_slide.png", 1.0, 4.6, w=31.8)
 text(s, 1.2, 15.6, 31, 1.6, "One map file feeds both the planner and the CoppeliaSim scene  ·  modules talk through plan() and follow()",
      size=18, color=GREY)
 
@@ -275,7 +275,9 @@ bg.fill.solid(); bg.fill.fore_color.rgb = NAVY; bg.line.fill.background()
 text(s, 1.5, 4.0, 31, 3, "Thank you!  Questions?", size=44, bold=True, color=RGBColor(255, 255, 255),
      align=PP_ALIGN.CENTER)
 text(s, 1.5, 8.5, 31, 1.5, REPO, size=20, color=RGBColor(0xDD, 0xE6, 0xF0), align=PP_ALIGN.CENTER)
-text(s, 1.5, 10.5, 31, 1.5, "[team e-mails]", size=18, color=RGBColor(0xDD, 0xE6, 0xF0), align=PP_ALIGN.CENTER)
+text(s, 1.5, 9.7, 31, 1.5, "Video: youtu.be/S365_Npse0U", size=20, color=RGBColor(0xDD, 0xE6, 0xF0),
+     align=PP_ALIGN.CENTER)
+text(s, 1.5, 11.2, 31, 1.5, "[team e-mails]", size=18, color=RGBColor(0xDD, 0xE6, 0xF0), align=PP_ALIGN.CENTER)
 text(s, 1.5, 13.0, 31, 2, "Mihika · Divyanshu Dhyani · Disha Rastogi · Sumit Malhotra · Prachi Chetan Padodara",
      size=18, color=RGBColor(255, 255, 255), align=PP_ALIGN.CENTER)
 text(s, 24.0, 17.6, 9.3, 1.0, "Presenter: All", size=12, color=RGBColor(0xDD, 0xE6, 0xF0), align=PP_ALIGN.RIGHT)

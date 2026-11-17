@@ -874,7 +874,7 @@ for i, ref in enumerate(REFS, 1):
 
 H1("Appendix: Links and Logs")
 para(f"**GitHub repository:** {REPO}")
-para("**YouTube video (Unlisted):** ==https://youtu.be/<paste link after upload>==")
+para("**YouTube video (Unlisted):** https://youtu.be/S365_Npse0U")
 para("**Meeting log.** Table 14 records the team meetings: date, duration, attendees and decisions.")
 TAB[0] += 1
 c = new_par("Caption"); c.paragraph_format.keep_with_next = True
