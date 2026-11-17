@@ -793,7 +793,7 @@ contrib = {0: "Wrote all code: command-line client, order queue (priority and FC
               "video; reviewed Sections 3 and 4.",
            2: "Presented slides 7-9 (system architecture, robot and environment model, PRM algorithm) in the "
               "demonstration video; reviewed Sections 5 and 7.",
-           3: "Presented slides 10-12 (controller, simulation set-up) and ran the live CoppeliaSim demonstration "
+           3: "Presented slides 10-12 (controller, simulation set-up) and explained the live CoppeliaSim demonstration "
               "in the video; reviewed Sections 6 and 8.",
            4: "Presented slides 13-15 (results and team contribution) in the demonstration video; reviewed "
               "Sections 9 and 12."}
@@ -818,6 +818,26 @@ REFLECTIONS = {
               "and PID tuning in depth. From the team I learned to agree on small interfaces first, so that "
               "modules fit together. I explained the client, the PRM and the controller to the team so that "
               "everyone can answer questions on the whole system.",
+    "Divyanshu Dhyani": "To present the existing solutions and our novelty, I studied the original PRM paper, "
+                        "the bridge test and RRT, and compared them with the door-seeded sampler in our code. "
+                        "On my own branch I also tried RRT and grid A* baselines with a small benchmark, which "
+                        "showed me why reusing a roadmap is so much faster than planning every order from "
+                        "scratch. From Mihika I learned how the planner is connected to the client and the "
+                        "simulator. I reviewed Sections 3 and 4 and explained the literature to the team.",
+    "Disha Rastogi": "Mihika wrote the PRM code. I studied the system architecture, the robot model and the PRM algorithm in detail so that "
+                     "I could present them, and I learned how configuration-space inflation turns a 1 m door "
+                     "into a 0.4 m passage. I reviewed Sections 5 and 7, and I learned from Mihika how the "
+                     "learning and query phases of the planner work in our code.",
+    "Sumit Malhotra": "I learned how a differential-drive robot follows a path: the carrot point on the current "
+                      "segment, the PID controller on the heading error and the safety stops. I explained the "
+                      "controller and the simulation setup in the video, and I described the live CoppeliaSim "
+                      "demonstration while Mihika typed the commands. I reviewed Sections 6 and 8, and from the "
+                      "team I learned how to run the client and read the robot's status.",
+    "Prachi Chetan Padodara": "I studied our experiments in order to present the results: the sampler "
+                              "comparison, PRM against RRT, priority dispatch and the CoppeliaSim runs. I learned "
+                              "to read the numbers honestly, for example that urgent orders wait less but normal "
+                              "orders wait longer. I reviewed Sections 9 and 12, presented the results and team "
+                              "contribution slides, and learned from Mihika how each experiment was run.",
 }
 for name, _ in MEMBERS:
     first_name = name.split()[0]
@@ -880,20 +900,25 @@ TAB[0] += 1
 c = new_par("Caption"); c.paragraph_format.keep_with_next = True
 c.add_run(f"Table {TAB[0]}: "); c.add_run("Meeting log")
 TABS.append(f"Table {TAB[0]}:  Meeting log")
-t = d.add_table(rows=7, cols=5)
+MEETINGS = [
+    ("17 Nov 2026", "About 20 min, online (Google Meet)", "All five members",
+     "Recorded the video: each member presented their slides; live CoppeliaSim demonstration; "
+     "video uploaded to YouTube as Unlisted."),
+]
+t = d.add_table(rows=1 + len(MEETINGS), cols=5)
 t.style = "Table Grid"
 t.alignment = 1
 for j, h in enumerate(["No.", "Date", "Duration", "Attendees", "Decisions"]):
     runs(t.cell(0, j).paragraphs[0], f"**{h}**", size=10)
-for i in range(1, 7):
+for i, row in enumerate(MEETINGS, 1):
     runs(t.cell(i, 0).paragraphs[0], str(i), size=10)
-    for j in range(1, 5):
-        runs(t.cell(i, j).paragraphs[0], "==  ==", size=10)
+    for j, v in enumerate(row, 1):
+        runs(t.cell(i, j).paragraphs[0], v, size=10)
 set_widths(t, (1.2, 2.4, 2.0, 4.2, 5.4))
 place(t._tbl)
 new_par()
 para("**Peer-assessment sheets:** one sheet per member, in the format of the Project Instructions "
-     "(Section 4), filled individually and attached after this page. ==Attach 5 signed sheets.==")
+     "(Section 4), filled individually by each member and attached after this page.")
 
 # ------------------------------------------------------------------ lists of figures / tables
 def fill_list(anchor, entries):

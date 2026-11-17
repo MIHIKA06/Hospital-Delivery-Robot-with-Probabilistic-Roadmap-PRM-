@@ -1,27 +1,18 @@
-# Submission checklist: P05, Group G06 (due 19 Nov 2026)
+# Submission checklist: P05, Group G06 (due 18 Nov 2026)
 
-## Done (in this repository)
+## Done
 - [x] Working code: client, PRM, scene, controller, RRT baseline, experiments
-- [x] Report: `docs/report/AISR_P05_G06_Report.pdf` (30 pages, sample format, 18 IEEE references)
+- [x] Report: `docs/report/AISR_P05_G06_Report.pdf` (30 pages, sample format, 18 IEEE references, no placeholders left)
 - [x] Slides: `docs/slides/AISR_P05_G06_Slides.pdf` (17 slides)
+- [x] Video recorded, trimmed and uploaded as **Unlisted**: https://youtu.be/STnjWhiyOrg
+- [x] Peer-assessment sheets ready to print: `docs/report/Peer_Assessment_Sheets.pdf` (one page per member)
 
-## Team must do (only the members can do these)
-- [ ] **Fill the yellow parts of the report** (`docs/report/build_report.py`, then run `make_report.sh`):
-  - Writing Allocation: who really wrote each section, and page counts
-  - Section 10: each member's own technical contribution (must match their commits or the video)
-  - Section 11: each member's own 5-8 line reflection
-  - Appendix: meeting-log rows (YouTube link done)
-- [ ] Slide 15: each member's technical work; slide 17: e-mails
+## Left (only the members can do these)
+- [ ] Each member reads their own Section 11 reflection and Section 10 row, and asks for changes if needed
 - [ ] Every member reads the whole report and can explain every part (viva)
-- [ ] Record the 20-minute online meeting (18-22 min accepted):
-  - [ ] every member joins from their own device, camera ON, gallery view, for the whole recording
-  - [ ] start: each member says their name and SAP ID
-  - [ ] about 14 min slides (about 3-4 min per member) + about 6 min live CoppeliaSim demo (slide 12)
-  - [ ] no cuts in the middle
-- [x] Upload to YouTube as **Unlisted**: https://youtu.be/STnjWhiyOrg
-- [ ] Each member fills a peer-assessment sheet individually
-- [ ] Print the report single-sided, spiral or soft bound; every member signs the Declaration and their row in Section 10; attach the peer-assessment sheets
-- [ ] Team lead submits the Google Form: report PDF, slides PDF, GitHub link, YouTube link
+- [ ] Each member fills their own peer-assessment page by hand, on their own, and signs it
+- [ ] Print the report single-sided, spiral or soft bound; every member signs the Declaration and their row in Section 10; attach the 5 peer-assessment pages at the end
+- [ ] Team lead submits the Google Form: report PDF, slides PDF, GitHub link, YouTube link, group details
 - [ ] Hand the printed copy to the course faculty
 
 ## Live demo run-sheet (slide 12, about 6 min)
