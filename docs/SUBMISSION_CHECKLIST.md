@@ -18,7 +18,7 @@
   - [ ] start: each member says their name and SAP ID
   - [ ] about 14 min slides (about 3-4 min per member) + about 6 min live CoppeliaSim demo (slide 12)
   - [ ] no cuts in the middle
-- [x] Upload to YouTube as **Unlisted**: https://youtu.be/S365_Npse0U
+- [x] Upload to YouTube as **Unlisted**: https://youtu.be/STnjWhiyOrg
 - [ ] Each member fills a peer-assessment sheet individually
 - [ ] Print the report single-sided, spiral or soft bound; every member signs the Declaration and their row in Section 10; attach the peer-assessment sheets
 - [ ] Team lead submits the Google Form: report PDF, slides PDF, GitHub link, YouTube link

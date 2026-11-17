@@ -275,7 +275,7 @@ bg.fill.solid(); bg.fill.fore_color.rgb = NAVY; bg.line.fill.background()
 text(s, 1.5, 4.0, 31, 3, "Thank you!  Questions?", size=44, bold=True, color=RGBColor(255, 255, 255),
      align=PP_ALIGN.CENTER)
 text(s, 1.5, 8.5, 31, 1.5, REPO, size=20, color=RGBColor(0xDD, 0xE6, 0xF0), align=PP_ALIGN.CENTER)
-text(s, 1.5, 9.7, 31, 1.5, "Video: youtu.be/S365_Npse0U", size=20, color=RGBColor(0xDD, 0xE6, 0xF0),
+text(s, 1.5, 9.7, 31, 1.5, "Video: youtu.be/STnjWhiyOrg", size=20, color=RGBColor(0xDD, 0xE6, 0xF0),
      align=PP_ALIGN.CENTER)
 text(s, 1.5, 11.2, 31, 1.5, "[team e-mails]", size=18, color=RGBColor(0xDD, 0xE6, 0xF0), align=PP_ALIGN.CENTER)
 text(s, 1.5, 13.0, 31, 2, "Mihika · Divyanshu Dhyani · Disha Rastogi · Sumit Malhotra · Prachi Chetan Padodara",
