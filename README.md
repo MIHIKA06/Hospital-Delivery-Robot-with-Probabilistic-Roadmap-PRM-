@@ -95,7 +95,7 @@ CoppeliaSim tour (`test_controller_sim.py --fast`, door sampler): all 9 legs rea
 
 ## Report and slides
 
-- `docs/report/AISR_P05_G06_Report.pdf` / `.docx` is the full report in the AISR sample template (30 pages). Rebuild it with `sh docs/report/make_report.sh "<path to AISR_Sample_Project_Report.docx>"`.
+- `docs/report/AISR_P05_G06_Report.pdf` / `.docx` is the full report in the AISR sample template (31 pages). Rebuild it with `sh docs/report/make_report.sh "<path to AISR_Sample_Project_Report.docx>"`.
 - `docs/slides/AISR_P05_G06_Slides.pdf` / `.pptx` is the 17-slide deck. Rebuild it with `python3 docs/slides/build_slides.py`.
 - `docs/SUBMISSION_CHECKLIST.md` lists what is still to do before submission.
 
