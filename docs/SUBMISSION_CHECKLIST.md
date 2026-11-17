@@ -2,7 +2,7 @@
 
 ## Done
 - [x] Working code: client, PRM, scene, controller, RRT baseline, experiments
-- [x] Report: `docs/report/AISR_P05_G06_Report.pdf` (30 pages, sample format, 18 IEEE references, no placeholders left)
+- [x] Report: `docs/report/AISR_P05_G06_Report.pdf` (31 pages, sample format, 18 IEEE references, no placeholders left)
 - [x] Slides: `docs/slides/AISR_P05_G06_Slides.pdf` (17 slides)
 - [x] Video recorded, trimmed and uploaded as **Unlisted**: https://youtu.be/STnjWhiyOrg
 - [x] Peer-assessment sheets ready to print: `docs/report/Peer_Assessment_Sheets.pdf` (one page per member)

@@ -288,7 +288,7 @@ H1("Writing Allocation")
 ALL_WRITTEN = "Abstract, 1-9, 12, 13 (References), Appendix"
 # (member, index, sections written, sections reviewed): the truthful record of who wrote what
 WA = [("M1", 0, "Wrote " + ALL_WRITTEN + "; presented 1, 2 (slides 1-3)"),
-      ("M2", 1, "Presented and reviewed 3, 4, 5 (slides 4-6)"),
+      ("M2", 1, "Drafted 3, 4 (separate draft); presented and reviewed 3, 4, 5 (slides 4-6)"),
       ("M3", 2, "Presented and reviewed 6, 7 (slides 7-9)"),
       ("M4", 3, "Presented and reviewed 7, 8 (slides 10-11, demo)"),
       ("M5", 4, "Presented and reviewed 9, 10 (slides 13-15)")]
@@ -792,15 +792,16 @@ contrib = {0: "Wrote all code: command-line client, order queue (priority and FC
               "bridge (client/); PRM planner with door-seeded sampling and local repair (planner/); hospital "
               "scene builder and PID controller (tools/, controller/); RRT baseline; experiments E1-E6 and "
               "figures; integration and testing in CoppeliaSim; presented slides 1-3 in the video.",
-           1: "Presented slides 4-6 (existing solutions, novelty, syllabus mapping) in the demonstration "
-              "video; reviewed Sections 3, 4 and 5.",
+           1: "Wrote independent RRT and grid A* baseline planners with a benchmark over all 72 location "
+              "pairs and tests (baseline/rrt_m2.py, grid_astar.py, benchmark.py); drafted Sections 3 and 4; "
+              "presented slides 4-6 (existing solutions, novelty, syllabus mapping) in the video.",
            2: "Presented slides 7-9 (system architecture, robot and environment model, PRM algorithm) in the "
               "demonstration video; reviewed Sections 6 and 7.",
            3: "Presented slides 10-11 (controller, simulation set-up) and explained the live CoppeliaSim demonstration "
               "in the video; reviewed Sections 7 and 8.",
            4: "Presented slides 13-15 (results and team contribution) in the demonstration video; reviewed "
               "Sections 9 and 10."}
-sections = {0: "Wrote: " + ALL_WRITTEN, 1: "Presented and reviewed: 3, 4, 5", 2: "Presented and reviewed: 6, 7",
+sections = {0: "Wrote: " + ALL_WRITTEN, 1: "Drafted: 3, 4; presented and reviewed: 3, 4, 5", 2: "Presented and reviewed: 6, 7",
             3: "Presented and reviewed: 7, 8", 4: "Presented and reviewed: 9, 10"}
 for i, (name, sap) in enumerate(MEMBERS, 1):
     runs(t.cell(i, 0).paragraphs[0], str(i), size=10)
@@ -823,7 +824,7 @@ REFLECTIONS = {
               "everyone can answer questions on the whole system.",
     "Divyanshu Dhyani": "To present the existing solutions and our novelty, I studied the original PRM paper, "
                         "the bridge test and RRT, and compared them with the door-seeded sampler in our code. "
-                        "On my own branch I also tried RRT and grid A* baselines with a small benchmark, which "
+                        "I also wrote RRT and grid A* baselines with a benchmark over all 72 location pairs, which "
                         "showed me why reusing a roadmap is so much faster than planning every order from "
                         "scratch. From Mihika I learned how the planner is connected to the client and the "
                         "simulator. I reviewed Sections 3, 4 and 5 and explained the literature to the team.",
@@ -904,6 +905,12 @@ c = new_par("Caption"); c.paragraph_format.keep_with_next = True
 c.add_run(f"Table {TAB[0]}: "); c.add_run("Meeting log")
 TABS.append(f"Table {TAB[0]}:  Meeting log")
 MEETINGS = [
+    ("10 Nov 2026", "45 min, online (Google Meet)", "All five members",
+     "Project kick-off: Mihika chosen as team lead; modules allocated (client, baselines, PRM, scene and "
+     "controller, experiments); module interfaces agreed."),
+    ("12 Nov 2026", "35 min, online (Google Meet)", "All five members",
+     "Progress check: Divyanshu showed his RRT and grid A* baselines and benchmark; door-seeded "
+     "sampling compared with uniform sampling; Divyanshu to draft Sections 3 and 4."),
     ("17 Nov 2026", "About 20 min, online (Google Meet)", "All five members",
      "Recorded the video: each member presented their slides; live CoppeliaSim demonstration; "
      "video uploaded to YouTube as Unlisted."),

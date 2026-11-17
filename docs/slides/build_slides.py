@@ -250,7 +250,7 @@ text(s, 1.0, 13.8, 32, 3, ["Honest trade-off: priority helps urgent orders but n
 s = slide("Team Contribution", "Prachi Chetan Padodara")
 table(s, [["Member", "Presents", "Report", "Contribution (report Table 13)"],
           ["Mihika", "1\u20133", "Wrote all", "All code: client, PRM, scene, controller, RRT, experiments"],
-          ["Divyanshu Dhyani", "4\u20136", "Reviewed 3, 4, 5", "Presentation of existing work, novelty, syllabus"],
+          ["Divyanshu Dhyani", "4\u20136", "Drafted 3, 4", "RRT + grid A* baselines, benchmark; presentation"],
           ["Disha Rastogi", "7\u20139", "Reviewed 6, 7", "Presentation of architecture, model, PRM"],
           ["Sumit Malhotra", "10\u201312", "Reviewed 7, 8", "Presentation of controller, setup, live demo"],
           ["Prachi C. Padodara", "13\u201315", "Reviewed 9, 10", "Presentation of results and contribution"]],
