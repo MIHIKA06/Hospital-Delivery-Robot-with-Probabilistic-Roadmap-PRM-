@@ -7,7 +7,7 @@ cd "$(dirname "$0")/../.."
 SAMPLE="${1:-../AISR_Sample_Project_Report (1).docx}"
 R=docs/report
 SOFFICE="${SOFFICE:-/Applications/LibreOffice.app/Contents/MacOS/soffice}"
-OUT=AISR_P05_G06_Report
+OUT="${OUT:-AISR_P05_G06_Report}"   # set OUT and SIGN_DIR for the signed copy (see make_signed.sh)
 
 pdf() { (cd $R && "$SOFFICE" --headless --convert-to pdf $OUT.docx >/dev/null 2>&1); }
 

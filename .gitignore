@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 .DS_Store
 results/order_log.csv
+docs/report/signatures/
+docs/report/*_Report_signed.*

@@ -76,6 +76,22 @@ for r, (name, sap) in enumerate(MEMBERS, 1):
     t1.cell(r, 0).paragraphs[0].runs[0].text = name
     t1.cell(r, 1).paragraphs[0].runs[0].text = sap
 
+# Signed copy only: SIGN_DIR holds <firstname>.png (kept out of git). The public PDF stays unsigned.
+SIGN_DIR = os.environ.get("SIGN_DIR")
+
+
+def sign(cell, name, width_cm=2.6):
+    path = SIGN_DIR and os.path.join(SIGN_DIR, name.split()[0].lower() + ".png")
+    if not path or not os.path.exists(path):
+        return
+    par = cell.paragraphs[0] if not cell.paragraphs[0].text.strip() else cell.add_paragraph()
+    par.paragraph_format.space_before = par.paragraph_format.space_after = Pt(0)
+    par.add_run().add_picture(path, width=Cm(width_cm))
+
+
+for r, (name, _) in enumerate(MEMBERS, 1):
+    sign(t1.cell(r, 2), name)
+
 # ------------------------------------------------------------------ clear old content
 front_end = kids[56]                       # paragraph holding the front-matter sectPr
 body_sect = kids[-1]                       # final sectPr
@@ -808,6 +824,7 @@ for i, (name, sap) in enumerate(MEMBERS, 1):
     runs(t.cell(i, 1).paragraphs[0], f"{name} ({sap})", size=10)
     runs(t.cell(i, 2).paragraphs[0], contrib[i - 1], size=10)
     runs(t.cell(i, 3).paragraphs[0], sections[i - 1], size=10)
+    sign(t.cell(i, 3), name, width_cm=2.4)
 set_widths(t, (1.2, 3.6, 7.0, 3.4))
 place(t._tbl)
 new_par()
